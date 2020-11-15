@@ -35,9 +35,15 @@ en:
 
   home:
     home:
-      title: My Fitness
+      title: Home Page
       welcome: Welcome to "My Fitness!"
     
     contact:
       title: Contact Us
       contact_us: Fill in the form below to contact us
+
+  shared: 
+    header:
+      title: My Fitness
+    footer:
+      content: Contact Us
