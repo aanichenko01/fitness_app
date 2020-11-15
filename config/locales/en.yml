@@ -37,3 +37,7 @@ en:
     home:
       title: My Fitness
       welcome: Welcome to "My Fitness!"
+    
+    contact:
+      title: Contact Us
+      contact_us: Fill in the form below to contact us
