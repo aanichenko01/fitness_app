@@ -32,3 +32,8 @@
 en:
   app_title: My Fitness
   app_description: A fitness website
+
+  home:
+    home:
+      title: My Fitness
+      welcome: Welcome to "My Fitness!"

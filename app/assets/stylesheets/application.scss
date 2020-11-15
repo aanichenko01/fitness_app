@@ -15,3 +15,17 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+$font: Georgia, Times, "Times New Roman", serif;
+$color1: #6b89b6;
+$color2: #ffffff;
+
+body {
+    font-family: $font;
+    background-color: $color2;
+    margin: 10px;
+    padding: 10px;
+}
+h1 {
+    text-transform: uppercase;
+}
