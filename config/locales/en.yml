@@ -52,6 +52,11 @@ en:
       enter_message: What do you want to say?
       submit: Submit
 
+    request_contact: 
+      no_email: You must provide an email address.
+      email_sent: Email sent, we will be in touch shortly.
+        
+
   shared: 
     header:
       title: Health Me
