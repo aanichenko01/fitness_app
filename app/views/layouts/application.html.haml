@@ -19,8 +19,21 @@
 
     = render 'shared/header'
 
-    = yield
-
+    .container-fluid.text-center
+      .row.content
+        .col-sm-2.sidenav
+          %p
+            %a{:href => "#"} Link
+          %p
+            %a{:href => "#"} Link
+          %p
+            %a{:href => "#"} Link
+        .col-sm-8.text-left
+          = yield
+        .col-sm-2.sidenav
+          .well
+            %p ADS
+          .well
+            %p ADS
+      
     = render 'shared/footer'
-
-    
