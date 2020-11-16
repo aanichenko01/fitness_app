@@ -9,15 +9,11 @@
                 %a.navbar-brand{'href' => '#'} Logo
             #myNavbar.collapse.navbar-collapse
                 %ul.nav.navbar-nav.navbar
-                    %li
-                        %a{'href' => '/home'} Home
-                    %li
-                        %a{'href' => '/contact'} Contact
+                    %li=link_to t('.nav_home'), home_path
+                    %li=link_to t('.nav_contact'), contact_path
                 %ul.nav.navbar-nav.navbar-right
                     %li
-                        %a{'href' => '#'}
-                            %span.glyphicon.glyphicon-log-in 
-                            Login
+                        %li=link_to t('.nav_login')
     
     %h1= t('.title')
 
