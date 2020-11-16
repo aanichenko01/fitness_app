@@ -30,13 +30,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  app_title: My Fitness
+  app_title: Health Me
   app_description: A fitness website
 
   home:
     home:
       title: Home Page
-      welcome: Welcome to "My Fitness!"
+      welcome: Welcome to "Health Me!"
     
     contact:
       title: Contact Us
@@ -44,6 +44,6 @@ en:
 
   shared: 
     header:
-      title: My Fitness
+      title: Health Me
     footer:
       content: Contact Us
