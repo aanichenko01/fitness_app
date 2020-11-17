@@ -4,7 +4,7 @@
 = form_tag request_contact_path, method: 'post' do
 
 
-    %form{'action' => '/action_page.php'}
+    %form{'action' => '/action_page.php', 'id' => 'contactform'}
         .form-group
             = label_tag :name, t('.name')
             = text_field_tag :name, '', title: t('.enter_name'), class: 'form-control'
@@ -20,6 +20,10 @@
         .form-group
             = label_tag :message, t('.message')
             = text_field_tag :message, '', title: t('.enter_message'),class: 'form-control input-lg'
+
+        .form-group
+            .col-md-9.col-md-offset-3
+                #messages
 
         .form-group
             = submit_tag t('.submit'), class: 'btn btn-default'
