@@ -14,52 +14,53 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-$font: Georgia, Times, "Times New Roman", serif;
-$color1: #6b89b6;
-$color2: #ffffff;
-
-body {
-    font-family: $font;
-    background-color: $color2;
-    margin: 10px;
-    padding: 10px;
-}
-
-h1 {
-    text-transform: uppercase;
-}
-
-/* Remove the navbar's default margin-bottom and rounded borders */ 
-.navbar {
-    margin-bottom: 0;
-    border-radius: 0;
-  }
-  
-  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-  .row.content {height: 450px}
-  
-  .sidenav {
-    padding-top: 20px;
-  }
-  
-  /* Set black background color, white text and some padding */
-  footer {
-    background-color: rgb(255, 255, 255);
-    color: white;
-    padding: 15px;
-  }
-  
-  /* On small screens, set height to 'auto' for sidenav and grid */
-  @media screen and (max-width: 767px) {
-    .sidenav {
-      height: auto;
-      padding: 15px;
-    }
-    .row.content {height:auto;} 
-  }
-
-
-
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ 
+ $font: Georgia, Times, "Times New Roman", serif;
+ $color1: #6b89b6;
+ $color2: #ffffff;
+ 
+ body {
+     font-family: $font;
+     background-color: $color2;
+     margin: 10px;
+     padding: 10px;
+ }
+ 
+ h1 {
+     text-transform: uppercase;
+ }
+ 
+ /* Remove the navbar's default margin-bottom and rounded borders */ 
+ .navbar {
+     margin-bottom: 0;
+     border-radius: 0;
+   }
+   
+   /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+   .row.content {height: 450px}
+   
+   .sidenav {
+     padding-top: 20px;
+   }
+   
+   /* Set black background color, white text and some padding */
+   footer {
+     background-color: rgb(255, 255, 255);
+     color: white;
+     padding: 15px;
+   }
+   
+   /* On small screens, set height to 'auto' for sidenav and grid */
+   @media screen and (max-width: 767px) {
+     .sidenav {
+       height: auto;
+       padding: 15px;
+     }
+     .row.content {height:auto;} 
+   }
+ 
+ 
+ 
+ 
