@@ -62,6 +62,7 @@ en:
       title: Health Me
       nav_home: Home
       nav_contact: Contact
+      nav_workouts: Workouts
       nav_login: Login
     footer:
       content: Contact Us

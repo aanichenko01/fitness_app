@@ -14,7 +14,7 @@ class WorkoutTest < ActiveSupport::TestCase
     workout.date = 2001-01-01
     workout.workout_type = 'Cardio'
     workout.duration = 41
-    workout.calories = 1
+    workout.calories = 100
 
     workout.save
     assert workout.valid?
