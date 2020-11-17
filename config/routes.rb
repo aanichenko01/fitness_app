@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :workouts
   root 'home#home'
 
   get 'home', to: "home#home"

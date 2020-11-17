@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Date:
+  = @workout.date
+%p
+  %b Workout type:
+  = @workout.workout_type
+%p
+  %b Duration:
+  = @workout.duration
+%p
+  %b Calories:
+  = @workout.calories
+
+= link_to 'Edit', edit_workout_path(@workout)
+\|
+= link_to 'Back', workouts_path
