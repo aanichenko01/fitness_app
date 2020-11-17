@@ -1,15 +1,12 @@
-%h1 Listing workouts
-
-%table
-  %thead
+%h2 Listing workouts
+%table.table.table-bordered.table-hover
+  %thread
     %tr
       %th Date
       %th Workout Type
       %th Duration
       %th Calories
-      %th
-      %th
-      %th
+
 
   %tbody
     - @workouts.each do |workout|
