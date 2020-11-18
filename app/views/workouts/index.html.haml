@@ -1,11 +1,11 @@
-%h2 Listing workouts
+%h2= t('.title')
 %table.table.table-bordered.table-hover
   %thread
     %tr
-      %th Date
-      %th Workout Type
-      %th Duration
-      %th Calories
+      %th= t('.date')
+      %th= t('.workout_type')
+      %th= t('.duration')
+      %th= t('.calories')
 
 
   %tbody

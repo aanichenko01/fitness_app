@@ -55,7 +55,14 @@ en:
     request_contact: 
       no_email: You must provide an email address.
       email_sent: Email sent, we will be in touch shortly.
-        
+  
+  workouts:
+    index:
+      title: Listing workouts
+      date: Date
+      workout_type: Workout Type
+      duration: Duration in minutes
+      calories: Calories
 
   shared: 
     header:
@@ -66,3 +73,4 @@ en:
       nav_login: Login
     footer:
       content: Contact Us
+  
