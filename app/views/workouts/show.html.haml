@@ -13,13 +13,19 @@
   %b= t('.calories')
   = @workout.calories
 
-%p= t('.exercises_title')
-%table
+%table.table.table-bordered.table-hover
+  %thread
+    %tr
+      %th= 'Exercises'
+      %th= 'Sets'
+      %th= 'Reps'
+
   %tbody
     - @workout.exercises.each do |exercise|
       %tr
         %td= exercise.title
-        %td= link_to t('.show'), exercise
+        %td= exercise.sets
+        %td= exercise.reps
         %td= link_to t('.edit'), edit_exercise_path(exercise)
         %td= link_to t('.destroy'), exercise, :method => :delete, :data => { :confirm => t('.destroy_confirm') }
 

@@ -77,8 +77,6 @@ en:
       duration: 'Duration (in minutes):'
       calories: 'Calories:'
 
-      exercises_title: 'Exercises:'
-
       show: Show
       edit: Edit
       destroy: Destroy

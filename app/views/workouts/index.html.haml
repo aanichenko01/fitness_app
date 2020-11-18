@@ -9,7 +9,7 @@
 
 
   %tbody
-    - @workouts.each do |workout|
+    - @workouts.reverse_each do |workout|
       %tr
         %td= workout.date
         %td= workout.workout_type
