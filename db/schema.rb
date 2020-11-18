@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_17_145843) do
+ActiveRecord::Schema.define(version: 2020_11_18_104310) do
+
+  create_table "exercises", force: :cascade do |t|
+    t.integer "workout_id", null: false
+    t.string "title", null: false
+    t.integer "sets"
+    t.integer "reps"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["workout_id"], name: "index_exercises_on_workout_id"
+  end
 
   create_table "workouts", force: :cascade do |t|
     t.date "date", null: false

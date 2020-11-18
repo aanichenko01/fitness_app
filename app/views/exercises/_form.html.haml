@@ -1,0 +1,22 @@
+= form_for @exercise do |f|
+  - if @exercise.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@exercise.errors.count, "error")} prohibited this exercise from being saved:"
+      %ul
+        - @exercise.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :workout
+    = f.text_field :workout
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :sets
+    = f.number_field :sets
+  .field
+    = f.label :reps
+    = f.number_field :reps
+  .actions
+    = f.submit 'Save'
