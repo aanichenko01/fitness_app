@@ -11,7 +11,7 @@ class ExercisesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_exercise_url
+    get new_exercise_url(workout_id: @exercise.workout_id)
     assert_response :success
   end
 

@@ -13,6 +13,9 @@
   %b Calories:
   = @workout.calories
 
+
+%p= link_to 'Add Exercise', new_exercise_path(workout_id: @workout)
+
 = link_to 'Edit', edit_workout_path(@workout)
 \|
 = link_to 'Back', workouts_path

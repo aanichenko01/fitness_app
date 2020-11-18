@@ -8,7 +8,8 @@
 
   .field
     = f.label :workout
-    = f.text_field :workout
+    %p= @exercise.workout.workout_type
+    = f.hidden_field :workout_id, value: @exercise.workout.id
   .field
     = f.label :title
     = f.text_field :title

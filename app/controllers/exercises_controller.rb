@@ -1,5 +1,6 @@
 class ExercisesController < ApplicationController
   before_action :set_exercise, only: [:show, :edit, :update, :destroy]
+  before_action :set_workout, only: [:new, :create]
 
   # GET /exercises
   # GET /exercises.json
@@ -14,7 +15,7 @@ class ExercisesController < ApplicationController
 
   # GET /exercises/new
   def new
-    @exercise = Exercise.new
+    @exercise = @workout.exercises.new
   end
 
   # GET /exercises/1/edit
@@ -24,7 +25,7 @@ class ExercisesController < ApplicationController
   # POST /exercises
   # POST /exercises.json
   def create
-    @exercise = Exercise.new(exercise_params)
+    @exercise = @workout.exercises.new(exercise_params)
 
     respond_to do |format|
       if @exercise.save
@@ -71,4 +72,8 @@ class ExercisesController < ApplicationController
     def exercise_params
       params.require(:exercise).permit(:workout_id, :title, :sets, :reps)
     end
+
+    def set_workout
+      @workout = Workout.find_by(id: params[:workout_id]) || Workout.find(exercise_params[:workout_id])
+     end
 end
