@@ -64,6 +64,29 @@ en:
       duration: Duration in minutes
       calories: Calories
 
+      show: Show
+      edit: Edit
+      destroy: Destroy
+      destroy_confirm: Are you sure?
+
+      new: New Workout
+    
+    show:
+      date: 'Date:'
+      workout_type: 'Workout Type:'
+      duration: 'Duration (in minutes):'
+      calories: 'Calories:'
+
+      exercises_title: 'Exercises:'
+
+      show: Show
+      edit: Edit
+      destroy: Destroy
+      destroy_confirm: Are you sure?
+
+      add: Add Exercise
+      back: Back
+
   shared: 
     header:
       title: Health Me

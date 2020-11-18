@@ -1,21 +1,30 @@
 %p#notice= notice
 
 %p
-  %b Date:
+  %b= t('.date')
   = @workout.date
 %p
-  %b Workout type:
+  %b= t('.workout_type')
   = @workout.workout_type
 %p
-  %b Duration:
+  %b= t('.duration')
   = @workout.duration
 %p
-  %b Calories:
+  %b= t('.calories')
   = @workout.calories
 
+%p= t('.exercises_title')
+%table
+  %tbody
+    - @workout.exercises.each do |exercise|
+      %tr
+        %td= exercise.title
+        %td= link_to t('.show'), exercise
+        %td= link_to t('.edit'), edit_exercise_path(exercise)
+        %td= link_to t('.destroy'), exercise, :method => :delete, :data => { :confirm => t('.destroy_confirm') }
 
-%p= link_to 'Add Exercise', new_exercise_path(workout_id: @workout)
+%p= link_to t('.add'), new_exercise_path(workout_id: @workout)
 
-= link_to 'Edit', edit_workout_path(@workout)
+= link_to t('.edit'), edit_workout_path(@workout)
 \|
-= link_to 'Back', workouts_path
+= link_to t('.back'), workouts_path
