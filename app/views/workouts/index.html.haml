@@ -6,19 +6,18 @@
       %th= t('.workout_type')
       %th= t('.duration')
       %th= t('.calories')
+      %th
 
 
   %tbody
     - @workouts.reverse_each do |workout|
+      - row_class = workout.id
       %tr
-        %td= workout.date
-        %td= workout.workout_type
-        %td= workout.duration
-        %td= workout.calories
-        %td= link_to t('.show'), workout
-        %td= link_to t('.edit'), edit_workout_path(workout)
-        %td= link_to t('.destroy'), workout, method: :delete, data: { confirm: t('.destroy_confirm') }
-
+        %td{:class => "#{row_class}"}= workout.date
+        %td{:class => "#{row_class}"}= workout.workout_type
+        %td{:class => "#{row_class}"}= workout.duration
+        %td{:class => "#{row_class}"}= workout.calories
+        %td{:class => "#{row_class}"}= link_to t('.details'), workout
 %br
 
 = link_to t('.new'), new_workout_path

@@ -57,6 +57,9 @@ en:
       email_sent: Email sent, we will be in touch shortly.
   
   workouts:
+    form:
+    edit:
+    
     index:
       title: Listing workouts
       date: Date
@@ -64,10 +67,10 @@ en:
       duration: Duration in minutes
       calories: Calories
 
-      show: Show
+      details: Details
       edit: Edit
-      destroy: Destroy
-      destroy_confirm: Are you sure?
+      delete: Delete
+      delete_confirm: Are you sure?
 
       new: New Workout
     
@@ -79,18 +82,24 @@ en:
 
       show: Show
       edit: Edit
-      destroy: Destroy
-      destroy_confirm: Are you sure?
+      delete: Delete
+      delete_confirm: Are you sure?
 
       add: Add Exercise
       back: Back
+  
+  exercises: 
+    form:
+    edit:
+    index:
+    show:
 
   shared: 
     header:
       title: Health Me
       nav_home: Home
       nav_contact: Contact
-      nav_workouts: Workouts
+      nav_workouts: Workout Log
       nav_login: Login
     footer:
       content: Contact Us

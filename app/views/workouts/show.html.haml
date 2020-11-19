@@ -19,6 +19,8 @@
       %th= 'Exercises'
       %th= 'Sets'
       %th= 'Reps'
+      %th
+      %th
 
   %tbody
     - @workout.exercises.each do |exercise|
@@ -27,10 +29,12 @@
         %td= exercise.sets
         %td= exercise.reps
         %td= link_to t('.edit'), edit_exercise_path(exercise)
-        %td= link_to t('.destroy'), exercise, :method => :delete, :data => { :confirm => t('.destroy_confirm') }
+        %td= link_to t('.delete'), exercise, :method => :delete, :data => { :confirm => t('.delete_confirm') }
 
 %p= link_to t('.add'), new_exercise_path(workout_id: @workout)
 
 = link_to t('.edit'), edit_workout_path(@workout)
 \|
-= link_to t('.back'), workouts_path
+= link_to t('.delete'), @workout, method: :delete, data: { confirm: t('.delete_confirm') }
+
+%p= link_to t('.back'), workouts_path
