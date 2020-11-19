@@ -18,8 +18,8 @@
 //= require turbolinks
 //= require_tree .
 
-function ValidateForm(){
-    $("form").validate({
+function ValidateContactForm(){
+    $("#contact_form").validate({
         //Validation rules
         rules: {
           name: 'required',
@@ -40,6 +40,6 @@ function ValidateForm(){
 
 
 $(document).ready(function() {
-      ValidateForm();
+      ValidateContactForm();
 });
   

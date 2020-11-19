@@ -1,7 +1,7 @@
 %h1= t('.title')
 %p= t('.contact_us')
 
-= form_tag request_contact_path, method: 'post' do
+= form_tag request_contact_path, method: 'post', id: "contact_form" do
 
 
     %form{'action' => '/action_page.php'}
