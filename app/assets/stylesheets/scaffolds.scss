@@ -18,15 +18,8 @@ body {
   }
   
   a {
-    color: #000;
-  
-    &:visited {
-      color: #666;
-    }
-  
     &:hover {
-      color: #fff;
-      background-color: rgb(83, 81, 81);
+      background-color: rgb(161, 179, 230);
     }
   }
   

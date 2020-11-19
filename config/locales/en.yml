@@ -61,11 +61,11 @@ en:
     edit:
     
     index:
-      title: Listing workouts
-      date: Date
-      workout_type: Workout Type
-      duration: Duration in minutes
-      calories: Calories
+      title: Your Workouts
+      date: DATE
+      workout_type: WORKOUT TYPE
+      duration: DURATION(IN MINS)
+      calories: CALORIES
 
       details: Details
       edit: Edit

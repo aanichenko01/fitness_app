@@ -1,11 +1,12 @@
 %h2= t('.title')
+
 %table.table.table-bordered.table-hover
   %thread
     %tr
-      %th= t('.date')
-      %th= t('.workout_type')
-      %th= t('.duration')
-      %th= t('.calories')
+      %th= link_to t('.date'), :sort => "date"
+      %th= link_to t('.workout_type'), :sort => "workout_type"
+      %th= link_to t('.duration'), :sort => "duration"
+      %th= link_to t('.calories'), :sort => "calories"
       %th
 
 
