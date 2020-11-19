@@ -57,7 +57,7 @@ class ExercisesController < ApplicationController
   def destroy
     @exercise.destroy
     respond_to do |format|
-      format.html { redirect_to exercises_url, notice: 'Exercise was successfully destroyed.' }
+      format.js { flash[:notice] = 'Exercise was successfully destroyed.'}
       format.json { head :no_content }
     end
   end
