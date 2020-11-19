@@ -38,16 +38,8 @@ function ValidateForm(){
       });
 }
 
-function SelectableRows(){
-  $(document).on('dblclick', 'td', function(){
-    var page_url = 'localhost:3000/workouts/' + this.className;
-    alert(page_url);
-  });
-}
-
 
 $(document).ready(function() {
       ValidateForm();
-      SelectableRows()
 });
   

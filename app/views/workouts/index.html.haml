@@ -11,13 +11,12 @@
 
   %tbody
     - @workouts.reverse_each do |workout|
-      - row_class = workout.id
       %tr
-        %td{:class => "#{row_class}"}= workout.date
-        %td{:class => "#{row_class}"}= workout.workout_type
-        %td{:class => "#{row_class}"}= workout.duration
-        %td{:class => "#{row_class}"}= workout.calories
-        %td{:class => "#{row_class}"}= link_to t('.details'), workout
+        %td= workout.date
+        %td= workout.workout_type
+        %td= workout.duration
+        %td= workout.calories
+        %td= link_to t('.details'), workout
 %br
 
 = link_to t('.new'), new_workout_path
