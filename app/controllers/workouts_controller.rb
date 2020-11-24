@@ -5,8 +5,7 @@ class WorkoutsController < ApplicationController
   # GET /workouts
   # GET /workouts.json
   def index
-    @workouts = Workout.user_workouts(current_user)
-    #@workouts = Workout.order(params[:sort])
+    @workouts = Workout.user_workouts(current_user).order(params[:sort])
   end
 
   # GET /workouts/1
