@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
+  
+  devise_for :users
+  # Resouce paths
   resources :exercises
   resources :workouts
-  root 'home#home'
 
+  # Home page is root
+  root 'home#home'
   get 'home', to: "home#home"
 
+  # Contact page
   get 'contact', to: 'home#contact'
-
   #post route for the contact form
   post 'request_contact', to: 'home#request_contact'
 

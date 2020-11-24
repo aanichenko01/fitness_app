@@ -108,7 +108,11 @@ en:
       nav_home: Home
       nav_contact: Contact
       nav_workouts: Workout Log
-      nav_login: Login
+      
+      logout: Logout
+      login: Login
+      sign_up: Sign Up
+
     footer:
       content: Contact Us
   
