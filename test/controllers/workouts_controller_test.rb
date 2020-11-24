@@ -1,8 +1,12 @@
 require 'test_helper'
 
 class WorkoutsControllerTest < ActionDispatch::IntegrationTest
+  Devise::Test::IntegrationHelpers
+
   setup do
     @workout = workouts(:one)
+    @user = users(:one)
+    sign_in @user
   end
 
   test "should get index" do

@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class WorkoutTest < ActiveSupport::TestCase
+  setup do
+    @user = users(:one)
+  end
+
   test 'should not save empty workout' do
     workout = Workout.new
 
@@ -15,6 +19,7 @@ class WorkoutTest < ActiveSupport::TestCase
     workout.workout_type = 'Cardio'
     workout.duration = 41
     workout.calories = 100
+    workout.user = @user
 
     workout.save
     assert workout.valid?
