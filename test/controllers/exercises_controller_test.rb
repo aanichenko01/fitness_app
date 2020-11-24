@@ -4,10 +4,11 @@ class ExercisesControllerTest < ActionDispatch::IntegrationTest
   Devise::Test::IntegrationHelpers
 
   setup do
+    get '/users/sign_in'
     @exercise = exercises(:one)
     @workout = workouts(:one)
-    @user = users(:one)
-    sign_in @user
+    sign_in users(:one)
+    post user_session_url
   end
 
   test "should get index" do
