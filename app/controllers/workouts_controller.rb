@@ -5,7 +5,8 @@ class WorkoutsController < ApplicationController
   # GET /workouts
   # GET /workouts.json
   def index
-    @workouts = Workout.order(params[:sort])
+    @workouts = Workout.user_workouts(current_user)
+    #@workouts = Workout.order(params[:sort])
   end
 
   # GET /workouts/1
@@ -26,6 +27,7 @@ class WorkoutsController < ApplicationController
   # POST /workouts.json
   def create
     @workout = Workout.new(workout_params)
+    @workout.user = current_user
 
     respond_to do |format|
       if @workout.save
