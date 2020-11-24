@@ -11,7 +11,6 @@
 
 
   %tbody
-    - @workouts = current_user.workouts
     - @workouts.reverse_each do |workout|
       %tr
         %td= workout.date

@@ -14,14 +14,6 @@
                     %li=link_to t('.nav_workouts'), workouts_path
                 %ul.nav.navbar-nav.navbar-right
                     %li
-                        - if user_signed_in?
-                            %li= link_to "#{current_user.email}", edit_user_registration_path
-                            %li= link_to 'Logout', destroy_user_session_path, method: 'delete'
-                        - else
-                            %li= link_to t('.nav_login'), new_user_session_path
-                            %li= link_to 'Sign Up', new_user_registration_path
+                        %li=link_to t('.nav_login')
     
     %h1= t('.title')
-
-    %p.notice= notice
-    %p.alert= alert
