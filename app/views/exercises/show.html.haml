@@ -1,14 +1,14 @@
 %p
-  %b Workout:
+  %b= t('.workout')
   = @exercise.workout.workout_type
 %p
-  %b Title:
+  %b= t('.title')
   = @exercise.title
 %p
-  %b Sets:
+  %b= t('.sets')
   = @exercise.sets
 %p
-  %b Reps:
+  %b= t('.reps')
   = @exercise.reps
 
-= link_to 'Back', @exercise.workout
+= link_to t('.back'), @exercise.workout

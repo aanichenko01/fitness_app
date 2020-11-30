@@ -32,16 +32,14 @@
 en:
   app_title: Health Me
   app_description: A fitness website
-
+  
   home:
     home:
       title: Home Page
       welcome: Welcome to "Health Me!"
-    
     contact:
       title: Contact Us
       contact_us: Fill in the form below to contact us.
-
       name: "Name:"
       enter_name: Enter your name
       email: "Email:"
@@ -51,68 +49,85 @@ en:
       message: "Message:"
       enter_message: What do you want to say?
       submit: Submit
-
     request_contact: 
       no_email: You must provide an email address.
       email_sent: Email sent, we will be in touch shortly.
-  
   workouts:
     form:
+      save: Save
     edit:
-    
+      title: Editing workout
+      back: Back
     index:
       title: Your Workouts
       date: DATE
       workout_type: WORKOUT TYPE
       duration: DURATION(IN MINS)
       calories: CALORIES
-
       details: Details
       edit: Edit
       delete: Delete
       delete_confirm: Are you sure?
-
       new: New Workout
-    
+    new:
+      title: New Workout
+      back: Back
     show:
       date: 'Date:'
       workout_type: 'Workout Type:'
       duration: 'Duration (in minutes):'
       calories: 'Calories:'
-
       edit: Edit
       delete: Delete
       delete_confirm: Are you sure?
-
       add: Add Exercise
       back: Back
-  
   exercises: 
     form:
+      save: Save
     table:
       exercises: Exercises
       sets: Sets
       reps: Reps
-
       edit: Edit
       delete: Delete
       delete_confirm: Are you sure?
     edit:
+      title: Editing exercise
     index:
+      title: Listing exercises
+      workout: Workout
+      workout_title: Title
+      sets: Sets
+      reps: Reps
+      show: Show
+      edit: Edit
+      delete: Delete
+      delete_confirm: Are you sure?
+      new_exercise: New Exercise
+    new:
+      title: New exercise
+      back: Back
     show:
-
-
+      workout: 'Workout:'
+      title: 'Title:'
+      sets: 'Sets:'
+      reps: 'Reps:'
+      back: Back
   shared: 
     header:
       title: Health Me
       nav_home: Home
       nav_contact: Contact
       nav_workouts: Workout Log
-      
       logout: Logout
       login: Login
       sign_up: Sign Up
-
     footer:
       content: Contact Us
+  contact_mailer:
+    contact_email:
+      name: 'Name:'
+      email: 'Email:'
+      telephone: 'Telephone:'
   

@@ -1,12 +1,12 @@
-%h1 Listing exercises
+%h1= t('.index_title')
 
 %table
   %thead
     %tr
-      %th Workout
-      %th Title
-      %th Sets
-      %th Reps
+      %th= t('.index_workout')
+      %th= t('.index_workout_title')
+      %th= t('.index_sets')
+      %th= t('.index_reps')
       %th
       %th
       %th
@@ -18,10 +18,10 @@
         %td= exercise.title
         %td= exercise.sets
         %td= exercise.reps
-        %td= link_to 'Show', exercise
-        %td= link_to 'Edit', edit_exercise_path(exercise)
-        %td= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('.show'), exercise
+        %td= link_to t('.edit'), edit_exercise_path(exercise)
+        %td= link_to t('.delete'), exercise, method: :delete, data: { confirm: t('.delete_confirm') }
 
 %br
 
-= link_to 'New Exercise', new_exercise_path
+= link_to t('.new_exercise'), new_exercise_path
