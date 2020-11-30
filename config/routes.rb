@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :weights
   devise_for :users
   # Resouce paths
   resources :exercises

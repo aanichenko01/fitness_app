@@ -114,12 +114,18 @@ en:
       sets: 'Sets:'
       reps: 'Reps:'
       back: Back
+  weights:
+    show:
+      edit: Edit
+      delete: Delete
+      delete_confirm: Are you sure?
+      back: Back
   shared: 
     header:
       title: Health Me
       nav_home: Home
-      nav_contact: Contact
       nav_workouts: Workout Log
+      nav_weights: Weight Log
       logout: Logout
       login: Login
       sign_up: Sign Up

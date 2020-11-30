@@ -1,0 +1,12 @@
+%p
+  %b Date:
+  = @weight.date
+%p
+  %b Weight:
+  = @weight.weight
+
+= link_to t('.edit'), edit_weight_path(@weight)
+\|
+= link_to t('.delete'), @weight, method: :delete, data: { confirm: t('.delete_confirm') }
+
+%p= link_to t('.back'), weights_path
