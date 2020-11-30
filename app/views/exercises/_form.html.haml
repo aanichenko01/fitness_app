@@ -15,9 +15,9 @@
     = f.text_field :title
   .field
     = f.label :sets
-    = f.number_field :sets
+    = f.number_field :sets, min: '0'
   .field
     = f.label :reps
-    = f.number_field :reps
+    = f.number_field :reps, min: '0'
   .actions
     = f.submit 'Save'

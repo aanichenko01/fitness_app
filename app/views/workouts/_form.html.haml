@@ -14,9 +14,9 @@
     = f.text_field :workout_type
   .field
     = f.label :duration
-    = f.number_field :duration
+    = f.number_field :duration, min: '0'
   .field
     = f.label :calories
-    = f.number_field :calories
+    = f.number_field :calories, min: '0'
   .actions
     = f.submit 'Save'
