@@ -6,8 +6,6 @@
       %th Date
       %th Weight
       %th
-      %th
-      %th
 
   %tbody
     - @weights.reverse_each do |weight|
@@ -15,8 +13,6 @@
         %td= weight.date
         %td= weight.weight
         %td= link_to 'Details', weight
-        %td= link_to 'Edit', edit_weight_path(weight)
-        %td= link_to 'Destroy', weight, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
