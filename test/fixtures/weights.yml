@@ -3,7 +3,9 @@
 one:
   date: 2020-11-30
   weight: 80.12
+  user_id: 1
 
 two:
   date: 2020-11-30
   weight: 45.56
+  user_id: 2
