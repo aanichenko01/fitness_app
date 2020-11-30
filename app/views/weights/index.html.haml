@@ -1,6 +1,6 @@
 %h2 Listing weights
 
-= line_chart Weight.group_by_day(:date).average(:weight)
+= line_chart current_user.weights.group_by_day(:date).average(:weight)
 
 %table.table.table-bordered.table-hover
   %thead

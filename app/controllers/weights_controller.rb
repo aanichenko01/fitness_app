@@ -1,10 +1,11 @@
 class WeightsController < ApplicationController
   before_action :set_weight, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /weights
   # GET /weights.json
   def index
-    @weights = Weight.all
+    @weights = Weight.user_weights(current_user)
   end
 
   # GET /weights/1
@@ -25,6 +26,7 @@ class WeightsController < ApplicationController
   # POST /weights.json
   def create
     @weight = Weight.new(weight_params)
+    @weight.user = current_user
 
     respond_to do |format|
       if @weight.save
