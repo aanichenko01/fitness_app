@@ -115,10 +115,24 @@ en:
       reps: 'Reps:'
       back: Back
   weights:
+    form:
+      save: Save
+    edit:
+      title: Editing weight
+      back: Back
+    index:
+      title: Listing weights
+      date: Date
+      weight: Weight
+      details: Details
+      new_weight: Add New Weight
+    new:
+      title: New Weight
+      back: Back
     show:
       edit: Edit
       delete: Delete
-      delete_confirm: Are you sure?
+      delete_confrim: Are you sure?
       back: Back
   shared: 
     header:

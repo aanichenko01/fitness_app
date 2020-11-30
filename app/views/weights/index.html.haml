@@ -1,12 +1,12 @@
-%h2 Listing weights
+%h2= t('.title')
 
 = line_chart current_user.weights.group_by_day(:date).average(:weight)
 
 %table.table.table-bordered.table-hover
   %thead
     %tr
-      %th Date
-      %th Weight
+      %th= t('.date')
+      %th= t('.weight')
       %th
 
   %tbody
@@ -14,8 +14,8 @@
       %tr
         %td= weight.date
         %td= weight.weight
-        %td= link_to 'Details', weight
+        %td= link_to t('.details'), weight
 
 %br
 
-= link_to 'Add New Weight', new_weight_path
+= link_to t('.new_weight'), new_weight_path
