@@ -65,3 +65,5 @@ gem 'jquery-rails'
 gem 'rails-controller-testing'
 gem 'jquery-validation-rails'
 gem 'devise'
+gem "chartkick"
+gem 'groupdate'
