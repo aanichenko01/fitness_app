@@ -1,8 +1,13 @@
 require 'test_helper'
 
 class SummaryControllerTest < ActionDispatch::IntegrationTest
+  setup do
+    @user = users(:one)
+    sign_in @user
+  end
+
   test "should get summary" do
-    get summary_summary_url
+    get summary_url
     assert_response :success
   end
 

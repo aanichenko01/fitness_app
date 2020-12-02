@@ -1,5 +1,7 @@
 %h2= t('.title')
 
+= line_chart current_user.weights.group_by_week(:date).average(:weight)
+
 %table.table.table-bordered.table-hover
   %thead
     %tr

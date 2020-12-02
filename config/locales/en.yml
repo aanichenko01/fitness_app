@@ -137,7 +137,6 @@ en:
   shared: 
     header:
       title: Health Me
-      nav_home: Home
       nav_workouts: Workout Log
       nav_weights: Weight Log
       nav_summary: Summary
