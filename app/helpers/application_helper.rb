@@ -6,4 +6,10 @@ module ApplicationHelper
           return string.html_safe
         end
     end
+
+    #helper method to display calories burned
+    def calories_burned
+      return Workout.calories_burned_this_month(current_user)
+      return string.html_safe
+    end
 end

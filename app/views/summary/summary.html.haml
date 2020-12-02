@@ -1,2 +1,11 @@
-%h2 Your Weight Now
+%h2 Total weight change:
 %p= weight_difference 
+
+-# calculates total calories for this month
+- totalCalories = 0
+- calories_burned.each do |workout|
+    - totalCalories =  totalCalories + workout.calories
+
+%h2 Total calories burned this month:
+-#displays total calories for this month
+%p= totalCalories
