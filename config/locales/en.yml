@@ -132,7 +132,7 @@ en:
     show:
       edit: Edit
       delete: Delete
-      delete_confrim: Are you sure?
+      delete_confirm: Are you sure?
       back: Back
   shared: 
     header:
