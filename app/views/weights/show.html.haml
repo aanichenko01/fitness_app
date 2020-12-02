@@ -1,14 +1,13 @@
+%br
+- if @weight.image.attached?
+  %image.img-fluid{alt: "Responsive image", src: "#{(url_for(@weight.image))}"}
+
 %p
   %b Date:
   = @weight.date
 %p
   %b Weight:
-  = @weight.weight
-
-- if @weight.image.attached?
-  %p
-    %b Progress Picture:
-  %image.img-fluid{alt: "Responsive image", src: "#{(url_for(@weight.image))}"}
+  = @weight.weight.to_s + ' kgs'
 
 %p= link_to t('.edit'), edit_weight_path(@weight)
 

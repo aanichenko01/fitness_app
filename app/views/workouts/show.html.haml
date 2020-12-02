@@ -6,7 +6,7 @@
   = @workout.workout_type
 %p
   %b= t('.duration')
-  = @workout.duration
+  = @workout.duration.to_s + ' minutes'
 %p
   %b= t('.calories')
   = @workout.calories
