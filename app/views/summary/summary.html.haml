@@ -11,13 +11,17 @@
 - totalHours = totalDuration/60
 - totalMins = totalDuration % 60
 
-%br
-= pie_chart workouts_this_month.group(:workout_type).count
+%h2= t('.title')
+
+-# Only displays graph is there are actually workouts
+-if totalDuration > 0
+    = pie_chart workouts_this_month.group(:workout_type).count
+
 %br
 
 %div.container-fluid.summary_display
     -#displays total weight chnage
-    %h4.summary.fas.fa-weight=' Total Weight Change'
+    %h4.summary.fas.fa-weight= ' Total Weight Change'
     %p.summary=  weight_difference.to_s + ' kgs'
     %br
     -#displays total calories for this month

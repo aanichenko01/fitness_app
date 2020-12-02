@@ -5,10 +5,9 @@
   %b Weight:
   = @weight.weight
 
-%p
-  %b Progress Picture:
-
 - if @weight.image.attached?
+  %p
+    %b Progress Picture:
   %image.img-fluid{alt: "Responsive image", src: "#{(url_for(@weight.image))}"}
 
 %p= link_to t('.edit'), edit_weight_path(@weight)

@@ -121,7 +121,7 @@ en:
       title: Editing weight
       back: Back
     index:
-      title: Listing weights
+      title: Your Weight
       date: Date
       weight: Weight
       details: Details
@@ -134,6 +134,9 @@ en:
       delete: Delete
       delete_confirm: Are you sure?
       back: Back
+  summary:
+    summary:
+      title: Your Summary
   shared: 
     header:
       title: Health Me
