@@ -1,11 +1,33 @@
-%h2 Total weight change:
-%p= weight_difference 
+
+= line_chart current_user.weights.group_by_week(:date).average(:weight)
+
+%br
+%h4= 'Total Weight Change: '
+%p.summary=  weight_difference.to_s + ' kgs'
 
 -# calculates total calories for this month
 - totalCalories = 0
-- calories_burned.each do |workout|
-    - totalCalories =  totalCalories + workout.calories
+- workouts_this_month.each do |workout|
+    - totalCalories += workout.calories
 
-%h2 Total calories burned this month:
+%br
 -#displays total calories for this month
-%p= totalCalories
+%h4= "Total Calories Burned This Month: "
+%p.summary= totalCalories.to_s + ' calories'
+
+-# calculates total duration of workouts for this month in hours and minutes
+- totalDuration = 0
+- totalHours = 0
+- totalMins = 0
+- workouts_this_month.each do |workout|
+    - totalDuration += workout.duration
+- totalHours = totalDuration/60
+- totalMins = totalDuration % 60
+
+%br
+-#displays total calories for this month
+%h4= 'Total Time Of Workouts This Month: '
+%p.summary=  totalHours.to_s + ' hours and ' + totalMins.to_s + ' minutes'
+
+
+= pie_chart workouts_this_month.group(:workout_type).count
