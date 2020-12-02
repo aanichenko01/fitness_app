@@ -12,6 +12,7 @@
                     %li=link_to t('.nav_home'), home_path
                     %li=link_to t('.nav_workouts'), workouts_path
                     %li=link_to t('.nav_weights'), weights_path
+                    %li=link_to t('.nav_summary'), summary_path
                 %ul.nav.navbar-nav.navbar-right
                     %li
                         - if user_signed_in?
