@@ -19,6 +19,23 @@ workouts = Workout.create([
 ])
 
 exercises = Exercise.create([
-    {workout_id: 4, title: 'Bicep Curls', sets: 3, reps: 12},
-    {workout_id: 4, title: 'Skull Crushers', sets: 3, reps: 12}
+    {workout_id: 1, title: 'Bicep Curls', sets: 3, reps: 12},
+    {workout_id: 1, title: 'Skull Crushers', sets: 3, reps: 12}
+])
+
+weights = Weight.create([
+    {date: '01-10-2020', weight: 80.5, user_id: 1 },
+    {date: '07-10-2020', weight: 79.5, user_id: 1 },
+    {date: '14-10-2020', weight: 78.6, user_id: 1 },
+    {date: '21-10-2020', weight: 80.7, user_id: 1 },
+    {date: '25-10-2020', weight: 81.7, user_id: 1 },
+    {date: '01-11-2020', weight: 78.5, user_id: 1 },
+    {date: '07-11-2020', weight: 76.4, user_id: 1 },
+    {date: '14-11-2020', weight: 76.5, user_id: 1 },
+    {date: '21-11-2020', weight: 75.9, user_id: 1 },
+    {date: '25-11-2020', weight: 75.7, user_id: 1 },
+    {date: '01-12-2020', weight: 74.9, user_id: 1 },
+    {date: '07-12-2020', weight: 75.1, user_id: 1 },
+    {date: '14-12-2020', weight: 60.5, user_id: 1 },
+    {date: '21-12-2020', weight: 59.5, user_id: 1 }
 ])
