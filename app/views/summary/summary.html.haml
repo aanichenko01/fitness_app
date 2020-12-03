@@ -12,10 +12,10 @@
         -#displays total weight chnage
         %h4.summary.fas.fa-weight= ' Total Weight Change'
         %p.summary=  weight_difference.to_s + ' kgs'
-        %br
     -else
         %h4.summary.fas.fa-exclamation-circle= ' Add Weight Records To See Weight Change'
     -if Workout.first.present?
+        %br
         -#displays total calories for this month
         %h4.summary.fas.fa-fire-alt= ' Total Calories Burned This Month'
         %p.summary= @totalCalories.to_s + ' calories'

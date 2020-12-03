@@ -1,6 +1,6 @@
 %h2= t('.title')
 
--if Workout.first.present?
+-if Weight.first.present?
   = line_chart current_user.weights.group_by_week(:date).average(:weight)
 
   %table.table.table-bordered.table-hover
