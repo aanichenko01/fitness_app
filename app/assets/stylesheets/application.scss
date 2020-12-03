@@ -20,6 +20,7 @@
  $font: Georgia, Times, "Times New Roman", serif;
  $color1: #6b89b6;
  $color2: #ffffff;
+
  
  body {
      font-family: $font;
@@ -35,11 +36,33 @@
  img {
   max-width: 40%;
   height: auto;
+}
+
+  .heading a:link,
+  .heading a:visited{
+    color: white;
   }
 
   th{
     text-transform: uppercase;
+    color: white;
+    background-color:  #2d3236;
   }
+
+  a:link,
+  a:visited{
+    color: #3a69c0;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color:  #2d3236;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+
  
  /* Remove the navbar's default margin-bottom and rounded borders */ 
  .navbar {

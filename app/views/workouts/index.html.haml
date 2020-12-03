@@ -3,21 +3,21 @@
 %table.table.table-bordered.table-hover
   %thread
     %tr
-      %th= link_to t('.date'), :sort => "date"
-      %th= link_to t('.workout_type'), :sort => "workout_type"
-      %th= link_to t('.duration'), :sort => "duration"
-      %th= link_to t('.calories'), :sort => "calories"
+      %th.heading= link_to t('.date'), :sort => "date"
+      %th.heading= link_to t('.workout_type'), :sort => "workout_type"
+      %th.heading= link_to t('.duration'), :sort => "duration"
+      %th.heading= link_to t('.calories'), :sort => "calories"
       %th
 
 
-  %tbody
-    - @workouts.reverse_each do |workout|
-      %tr
-        %td= workout.date
-        %td= workout.workout_type
-        %td= workout.duration
-        %td= workout.calories
-        %td= link_to t('.details'), workout
+    %tbody
+      - @workouts.reverse_each do |workout|
+        %tr
+          %td= workout.date
+          %td= workout.workout_type
+          %td= workout.duration
+          %td= workout.calories
+          %td= link_to t('.details'), workout
 %br
 
 = link_to t('.new'), new_workout_path
