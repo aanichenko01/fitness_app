@@ -1,10 +1,9 @@
 %h2= t('.title')
-%br
+
 -if Weight.first.present?
-
+  %br
   = line_chart current_user.weights.group_by_week(:date).average(:weight)
-
-%br
+  %br
 
 %i.far.fa-plus-square
 = link_to t('.new_weight'), new_weight_path
