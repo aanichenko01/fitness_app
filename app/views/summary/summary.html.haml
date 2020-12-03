@@ -6,18 +6,26 @@
 
 %br
 
+
 %div.container-fluid.summary_display
-    -#displays total weight chnage
-    %h4.summary.fas.fa-weight= ' Total Weight Change'
-    %p.summary=  weight_difference.to_s + ' kgs'
-    %br
-    -#displays total calories for this month
-    %h4.summary.fas.fa-fire-alt= ' Total Calories Burned This Month'
-    %p.summary= @totalCalories.to_s + ' calories'
-    -#displays total calories for this month
-    %br
-    %h4.summary.fas.fa-dumbbell= ' Total Time Of Workouts This Month'
-    %p.summary=  @totalHours.to_s + ' hours and ' + @totalMins.to_s + ' minutes'
+    -if Weight.first.present?
+        -#displays total weight chnage
+        %h4.summary.fas.fa-weight= ' Total Weight Change'
+        %p.summary=  weight_difference.to_s + ' kgs'
+        %br
+    -else
+        %h4.summary.fas.fa-exclamation-circle= ' Add Weight Records To See Weight Change'
+    -if Workout.first.present?
+        -#displays total calories for this month
+        %h4.summary.fas.fa-fire-alt= ' Total Calories Burned This Month'
+        %p.summary= @totalCalories.to_s + ' calories'
+        -#displays total calories for this month
+        %br
+        %h4.summary.fas.fa-dumbbell= ' Total Time Of Workouts This Month'
+        %p.summary=  @totalHours.to_s + ' hours and ' + @totalMins.to_s + ' minutes'
+    -else
+        %br
+        %h4.summary.fas.fa-exclamation-circle= ' Add Workouts To See Summary'
 
 %br
 

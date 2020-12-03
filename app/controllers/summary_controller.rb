@@ -2,7 +2,6 @@ class SummaryController < ApplicationController
   before_action :authenticate_user!
   
   def summary
-
     @totalCalories = 0
     @totalDuration = 0
     @totalHours = 0
@@ -16,7 +15,7 @@ class SummaryController < ApplicationController
       @totalDuration += workout.duration
     end
     @totalHours = @totalDuration/60
-    @totalMins = @totalDuration % 60
+    @totalMins = @totalDuration%60
   end
 
   

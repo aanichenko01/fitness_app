@@ -16,7 +16,7 @@ class Weight < ApplicationRecord
         weight_difference = current.weight - initial.weight
         if weight_difference > 0
             #makes weight appear as a negative to show weight loss
-            return weight_difference * -1
+            return weight_difference *-1
         else 
             #makes weight appear as a positive to show weight gain
             return weight_difference.abs
