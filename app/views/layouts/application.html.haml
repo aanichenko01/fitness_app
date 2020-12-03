@@ -23,7 +23,9 @@
     -#Adds font awesome
     %script{:crossorigin => "anonymous", :src => "https://kit.fontawesome.com/20d119ec82.js"}
 
-  %body.container-fluid.text-center
+  
+
+  %body
 
     = render 'shared/header'
 
@@ -43,5 +45,6 @@
             %p ADS
           .well
             %p ADS
-      
+    
+  .container-fluid.text-center 
     = render 'shared/footer'
