@@ -1,20 +1,21 @@
 %h2= t('.title')
 
-= line_chart current_user.weights.group_by_week(:date).average(:weight)
+-if Workout.first.present?
+  = line_chart current_user.weights.group_by_week(:date).average(:weight)
 
-%table.table.table-bordered.table-hover
-  %thead
-    %tr
-      %th= t('.date')
-      %th= t('.weight')
-      %th
-
-  %tbody
-    - @weights.reverse_each do |weight|
+  %table.table.table-bordered.table-hover
+    %thead
       %tr
-        %td= weight.date
-        %td= weight.weight
-        %td= link_to t('.details'), weight
+        %th= t('.date')
+        %th= t('.weight')
+        %th
+
+    %tbody
+      - @weights.reverse_each do |weight|
+        %tr
+          %td= weight.date
+          %td= weight.weight
+          %td= link_to t('.details'), weight
 
 %br
 
