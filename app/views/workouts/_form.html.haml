@@ -9,16 +9,16 @@
   %form{'action' => '/action_page.php'}
     .col-xs-3
       .form-group
-        = f.label :date, 'Date:'
+        = f.label :date
         = f.date_field :date, class: 'form-control'
       .form-group
-        = f.label :workout_type, 'Workout Type:'
+        = f.label :workout_type
         = f.text_field :workout_type, class: 'form-control'
       .form-group
-        = f.label :duration, 'Duration:'
-        = f.number_field :duration, class: 'form-control'
+        = f.label :duration
+        = f.number_field :duration, class: 'form-control', min: '1'
       .form-group
-        = f.label :calories, 'Calories:'
-        = f.number_field:calories, class: 'form-control'
+        = f.label :calories
+        = f.number_field:calories, class: 'form-control', min: '1'
       .form-group
-        = f.submit 'Submit', class: 'btn btn-default'
+        = f.submit t('.save'), class: 'btn btn-default'

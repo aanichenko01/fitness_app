@@ -6,18 +6,20 @@
         - @exercise.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :workout
-    %p= @exercise.workout.workout_type
-    = f.hidden_field :workout_id, value: @exercise.workout.id
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :sets
-    = f.number_field :sets, min: '0'
-  .field
-    = f.label :reps
-    = f.number_field :reps, min: '0'
-  .actions
-    = f.submit t('.save')
+  %form{'action' => '/action_page.php'}
+    .col-xs-3
+      .form-group
+        = f.label :workout
+        %p= @exercise.workout.workout_type
+        = f.hidden_field :workout_id, value: @exercise.workout.id, class: 'form-control'
+      .form-group
+        = f.label :title
+        = f.text_field :title, class: 'form-control'
+      .form-group
+        = f.label :sets
+        = f.number_field :sets, class: 'form-control', min: '1'
+      .form-group
+        = f.label :reps
+        = f.number_field :reps, class: 'form-control', min: '1'
+      .form-group
+        = f.submit t('.save'), class: 'btn btn-default'
