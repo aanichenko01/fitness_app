@@ -106,7 +106,7 @@ en:
       delete_confirm: Are you sure?
       new_exercise: New Exercise
     new:
-      title: New exercise
+      title: New Exercise
       back: Back
     show:
       workout: 'Workout:'
@@ -118,14 +118,14 @@ en:
     form:
       save: Save
     edit:
-      title: Editing weight
+      title: Editing Weight
       back: Back
     index:
       title: Your Weight
       date: Date
       weight: Weight(KG)
       details: Details
-      new_weight: Add New Weight
+      new_weight: New Weight
     new:
       title: New Weight
       back: Back

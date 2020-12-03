@@ -33,19 +33,9 @@
         = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
       .row.content
         .col-sm-2.sidenav
-          %p
-            %a{:href => "#"} Link
-          %p
-            %a{:href => "#"} Link
-          %p
-            %a{:href => "#"} Link
         .col-sm-8.text-left
           = yield
         .col-sm-2.sidenav
-          .well
-            %p ADS
-          .well
-            %p ADS
     
   .container-fluid.text-center 
     = render 'shared/footer'

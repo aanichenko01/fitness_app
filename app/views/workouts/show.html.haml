@@ -11,12 +11,16 @@
   %b= t('.calories')
   = @workout.calories
 
-= render :partial => "exercises/table" unless @workout.exercises.empty?
-
-%p= link_to t('.add'), new_exercise_path(workout_id: @workout)
-
 = link_to t('.edit'), edit_workout_path(@workout)
 \|
 = link_to t('.delete'), @workout, method: :delete, data: { confirm: t('.delete_confirm') }
 
-%p= link_to t('.back'), workouts_path
+%hr
+
+-#Renders exercises table if there are exercises to display
+= render :partial => "exercises/table" unless @workout.exercises.empty?
+
+%i.far.fa-plus-square
+= link_to t('.add'), new_exercise_path(workout_id: @workout)
+
+

@@ -1,5 +1,10 @@
 %h2= t('.title')
 
+%i.far.fa-plus-square
+= link_to t('.new'), new_workout_path
+%br
+%br
+
 -if Workout.first.present?
   %table.table.table-bordered.table-hover
     %thread
@@ -19,6 +24,3 @@
             %td= workout.duration
             %td= workout.calories
             %td= link_to t('.details'), workout
-%br
-
-= link_to t('.new'), new_workout_path

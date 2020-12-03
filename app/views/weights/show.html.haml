@@ -9,8 +9,6 @@
   %b Weight:
   = @weight.weight.to_s + ' kgs'
 
-%p= link_to t('.edit'), edit_weight_path(@weight)
-
-%p= link_to t('.delete'), @weight, method: :delete, data: { confirm: t('.delete_confirm') }
-
-%p= link_to t('.back'), weights_path
+= link_to t('.edit'), edit_weight_path(@weight)
+\|
+= link_to t('.delete'), @weight, method: :delete, data: { confirm: t('.delete_confirm') }
