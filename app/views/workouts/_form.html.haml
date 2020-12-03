@@ -6,17 +6,19 @@
         - @workout.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :date
-    = f.date_select :date
-  .field
-    = f.label :workout_type
-    = f.text_field :workout_type
-  .field
-    = f.label :duration
-    = f.number_field :duration, min: '0'
-  .field
-    = f.label :calories
-    = f.number_field :calories, min: '0'
-  .actions
-    = f.submit t('.save')
+  %form{'action' => '/action_page.php'}
+    .col-xs-3
+      .form-group
+        = f.label :date, 'Date:'
+        = f.date_field :date, class: 'form-control'
+      .form-group
+        = f.label :workout_type, 'Workout Type:'
+        = f.text_field :workout_type, class: 'form-control'
+      .form-group
+        = f.label :duration, 'Duration:'
+        = f.number_field :duration, class: 'form-control'
+      .form-group
+        = f.label :calories, 'Calories:'
+        = f.number_field:calories, class: 'form-control'
+      .form-group
+        = f.submit 'Submit', class: 'btn btn-default'
