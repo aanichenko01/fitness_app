@@ -6,14 +6,16 @@
         - @weight.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :date
-    = f.date_select :date
-  .field
-    = f.label :weight
-    = f.text_field :weight
-  .field
-    = f.label 'Progress Picture'
-    = f.file_field :image
-  .actions
-    = f.submit t('.save')
+  %form{'action' => '/action_page.php'}
+    .col-xs-3
+      .form-group
+        = f.label :date
+        = f.date_field :date, class: 'form-control'
+      .form-group
+        = f.label :weight
+        = f.number_field :weight, class: 'form-control', min: '0.0', step: '0.1'
+      .form-group
+        = f.label 'Progress Picture'
+        = f.file_field :image
+      .form-group
+        = f.submit t('.save'), class: 'btn btn-default'
