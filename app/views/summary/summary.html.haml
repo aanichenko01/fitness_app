@@ -1,20 +1,7 @@
--# calculates total calories for this month
-- totalCalories = 0
-- workouts_this_month.each do |workout|
-    - totalCalories += workout.calories
--# calculates total duration of workouts for this month in hours and minutes
-- totalDuration = 0
-- totalHours = 0
-- totalMins = 0
-- workouts_this_month.each do |workout|
-    - totalDuration += workout.duration
-- totalHours = totalDuration/60
-- totalMins = totalDuration % 60
-
 %h2= t('.title')
 
 -# Only displays graph is there are actually workouts
--if totalDuration > 0
+-if @totalDuration > 0
     = pie_chart workouts_this_month.group(:workout_type).count
 
 %br
@@ -26,11 +13,11 @@
     %br
     -#displays total calories for this month
     %h4.summary.fas.fa-fire-alt= ' Total Calories Burned This Month'
-    %p.summary= totalCalories.to_s + ' calories'
+    %p.summary= @totalCalories.to_s + ' calories'
     -#displays total calories for this month
     %br
     %h4.summary.fas.fa-dumbbell= ' Total Time Of Workouts This Month'
-    %p.summary=  totalHours.to_s + ' hours and ' + totalMins.to_s + ' minutes'
+    %p.summary=  @totalHours.to_s + ' hours and ' + @totalMins.to_s + ' minutes'
 
 %br
 
