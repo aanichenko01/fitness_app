@@ -12,4 +12,16 @@ module SummaryHelper
       return Workout.this_month(current_user)
       return string.html_safe
     end
+
+    #helper method to return first weight entry
+    def first_weight
+      return Weight.first_weight(current_user)
+      return string.html_safe
+    end
+
+    #helper method to return most recent weight entry
+    def current_weight
+      return Weight.current_weight(current_user)
+      return string.html_safe
+    end
 end

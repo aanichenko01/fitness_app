@@ -27,7 +27,21 @@
         %br
         %h4.box.fas.fa-exclamation-circle= ' Add Workouts To See Summary'
 
-%br
+-#display progress images
+.container-fluid.text-center
+    -if Weight.first.present?
+        %h2 Your Progress Pictures
+        %h5= 'First Weight Entry On: ' + first_weight.date.to_s
+        - if first_weight.image.attached?
+            %image.img-fluid{src: "#{(url_for(first_weight.image))}"}
+        - else
+            %h5.fas.fa-exclamation-circle Upload an Image to Your First Weight Entry to Compare
+        %h5= 'Most Recent Weight Entry On: ' + current_weight.date.to_s
+        - if current_weight.image.attached?
+            %image.img-fluid{src: "#{(url_for(current_weight.image))}"}
+        - else
+            %h5.fas.fa-exclamation-circle Upload an Image to Your Most Recent Weight Entry to Compare
+
 
 
 

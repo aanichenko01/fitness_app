@@ -22,4 +22,14 @@ class Weight < ApplicationRecord
             return weight_difference.abs
         end
     end
+
+    def self.first_weight(user)
+        # returns first weight entry
+        return Weight.order('date ASC').where(:user_id => user.id).first
+    end
+
+    def self.current_weight(user)
+        # returns most recent weight entry
+        return Weight.order('date DESC').where(:user_id => user.id).first
+    end
 end
