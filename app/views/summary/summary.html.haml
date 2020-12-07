@@ -11,7 +11,7 @@
     -if current_user.weights.first.present?
         -#displays total weight chnage
         %h4.box.fas.fa-weight= ' Weight Change This Month'
-        %p.box=  @weightDifference.to_s + ' kgs'
+        %p.box=  @weightDifference.to_s + ' kg'
     -else
         %h4.box.fas.fa-exclamation-circle= ' Add Weight Records To See Weight Change'
     -if current_user.workouts.first.present?
