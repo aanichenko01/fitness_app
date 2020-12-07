@@ -1,15 +1,21 @@
 %h2= t('.title')
 
--if Weight.first.present?
+-if current_user.weights.first.present?
   %br
   = line_chart current_user.weights.group_by_week(:date).average(:weight)
   %br
+  %div.container-fluid.box_display
+    -if current_user.weights.first.present?
+      -#displays total weight chnage
+      %h4.box.fas.fa-weight= ' Total Weight Change'
+      %p.box=  weight_difference.to_s + ' kgs'
+  %hr
 
 %i.far.fa-plus-square
 = link_to t('.new_weight'), new_weight_path
 %br
 
--if Weight.first.present?
+-if current_user.weights.first.present?
   %br
   %table.table.table-bordered.table-hover
     %thead

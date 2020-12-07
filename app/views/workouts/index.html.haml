@@ -5,7 +5,7 @@
 %br
 %br
 
--if Workout.first.present?
+-if current_user.workouts.first.present?
   %table.table.table-bordered.table-hover
     %thread
       %tr

@@ -8,20 +8,20 @@
 
 
 %div.container-fluid.box_display
-    -if Weight.first.present?
+    -if current_user.weights.first.present?
         -#displays total weight chnage
-        %h4.box.fas.fa-weight= ' Total Weight Change'
-        %p.box=  weight_difference.to_s + ' kgs'
+        %h4.box.fas.fa-weight= ' Weight Change This Month'
+        %p.box=  @weightDifference.to_s + ' kgs'
     -else
         %h4.box.fas.fa-exclamation-circle= ' Add Weight Records To See Weight Change'
-    -if Workout.first.present?
+    -if current_user.workouts.first.present?
         %br
         -#displays total calories for this month
-        %h4.box.fas.fa-fire-alt= ' Total Calories Burned This Month'
+        %h4.box.fas.fa-fire-alt= ' Calories Burned This Month'
         %p.box= @totalCalories.to_s + ' calories'
         -#displays total calories for this month
         %br
-        %h4.box.fas.fa-dumbbell= ' Total Time Of Workouts This Month'
+        %h4.box.fas.fa-dumbbell= ' Duration Of Workouts This Month'
         %p.box=  @totalHours.to_s + ' hours and ' + @totalMins.to_s + ' minutes'
     -else
         %br
@@ -29,7 +29,7 @@
 
 -#display progress images
 .container-fluid.text-center
-    -if Weight.first.present?
+    -if current_user.weights.first.present?
         %h2 Your Progress Pictures
         %h5= 'First Weight Entry On: ' + first_weight.date.to_s
         - if first_weight.image.attached?

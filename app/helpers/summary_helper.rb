@@ -13,6 +13,12 @@ module SummaryHelper
       return string.html_safe
     end
 
+    #helper method to return weights for current month
+    def weights_this_month
+      return Weight.this_month(current_user)
+      return string.html_safe
+    end
+
     #helper method to return first weight entry
     def first_weight
       return Weight.first_weight(current_user)
