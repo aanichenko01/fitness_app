@@ -47,5 +47,5 @@ weights = Weight.create([
     {date: '21-11-2020', weight: 59.5, user_id: 1 },
     {date: '25-11-2020', weight: 75.7, user_id: 1 },
     {date: '01-12-2020', weight: 74.9, user_id: 1 },
-    {date: '07-12-2020', weight: 75.1, user_id: 1 }
+    {date: '07-12-2020', weight: 73.1, user_id: 1 }
 ])
