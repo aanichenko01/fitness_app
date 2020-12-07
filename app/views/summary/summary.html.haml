@@ -1,7 +1,7 @@
 %h2= t('.title')
 
 -# Only displays graph is there are actually workouts
--if current_user.weights.first.present?
+-if @totalDuration > 0
     = pie_chart workouts_this_month.group(:workout_type).count
 
 %br
