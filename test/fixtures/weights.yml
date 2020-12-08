@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date: 2020-11-30
+  date: <%= Date.today %>
   weight: 80.12
   user_id: 1
 
 two:
-  date: 2020-11-30
+  date: <%= Date.today %>
   weight: 45.56
   user_id: 2

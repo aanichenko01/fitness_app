@@ -17,7 +17,9 @@ class SummaryController < ApplicationController
     @totalHours = @totalDuration/60
     @totalMins = @totalDuration%60
 
+    #checks whether there are any weight entries for current user
     if current_user.weights.first.present?
+      #if there are calculates weight differnce between first and most recent weight entry this month
       @weightDifference = helpers.weights_this_month.first.weight - helpers.weights_this_month.last.weight
       if @weightDifference > 0
         #makes weight appear as a negative to show weight loss
@@ -27,10 +29,5 @@ class SummaryController < ApplicationController
         @weightDifference = @weightDifference.abs
       end
     end
-    
-
-
   end
-
-  
 end
