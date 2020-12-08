@@ -11,11 +11,6 @@ class ExercisesControllerTest < ActionDispatch::IntegrationTest
     post user_session_url
   end
 
-  test "should get index" do
-    get exercises_url
-    assert_response :success
-  end
-
   test "should get new" do
     get new_exercise_url(workout_id: @exercise.workout_id)
     assert_response :success
