@@ -8,7 +8,7 @@ class Workout < ApplicationRecord
 
     scope :user_workouts, ->(user) { where(['user_id = ?', user.id]) }
 
-    #method to calculate total calories user burned in a month
+    #Returns all workouts for this month for a user
     def self.this_month(user)
         return Workout.where(date: Date.current.beginning_of_month..Date.current.end_of_month, :user_id => user.id)
     end

@@ -1,5 +1,5 @@
 module SummaryHelper
-    #helper method to display weight difference
+    #Helper method to display weight difference for current user
     def weight_difference
         if current_user
           return number_with_precision(Weight.weight_difference(current_user), :precision => 1)
@@ -7,25 +7,25 @@ module SummaryHelper
         end
     end
 
-    #helper method to return workouts for current month
+    #Helper method to return workouts for current month for current user
     def workouts_this_month
       return Workout.this_month(current_user)
       return string.html_safe
     end
 
-    #helper method to return weights for current month
+    #Helper method to return weights for current month for current user
     def weights_this_month
       return Weight.this_month(current_user)
       return string.html_safe
     end
 
-    #helper method to return first weight entry
+    #Helper method to return first weight entry for current user
     def first_weight
       return Weight.first_weight(current_user)
       return string.html_safe
     end
 
-    #helper method to return most recent weight entry
+    #Helper method to return most recent weight entry for current user
     def current_weight
       return Weight.current_weight(current_user)
       return string.html_safe
