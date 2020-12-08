@@ -17,7 +17,7 @@
 
 %hr
 
--#Renders exercises table if there are exercises to display
+-#Renders exercises table only if there are exercises to display
 = render :partial => "exercises/table" unless @workout.exercises.empty?
 
 %i.far.fa-plus-square

@@ -32,11 +32,12 @@
 en:
   app_title: Health Me
   app_description: A fitness website
-  
   home:
     home:
-      title: Home Page
       welcome: Welcome to Health Me
+      record_workouts: ' Record Your Workouts'
+      track_weight: ' Track Your Weight'
+      stay_motivated: ' Stay Motivated With a Progress Summary'
     contact:
       title: Contact Us
       contact_us: Fill in the form below to contact us.
@@ -94,17 +95,6 @@ en:
       delete_confirm: Are you sure?
     edit:
       title: Editing exercise
-    index:
-      title: Listing exercises
-      workout: Workout
-      workout_title: Title
-      sets: Sets
-      reps: Reps
-      show: Show
-      edit: Edit
-      delete: Delete
-      delete_confirm: Are you sure?
-      new_exercise: New Exercise
     new:
       title: New Exercise
       back: Back
@@ -137,6 +127,19 @@ en:
   summary:
     summary:
       title: Your Monthly Summary
+      weight_change: ' Weight Change This Month'
+      weight_change_error: ' Add Weight Records To See Weight Change'
+      calories_burned: ' Calories Burned This Month'
+      calories: ' calories'
+      kg: ' kg'
+      workouts: ' Duration Of Workouts This Month'
+      hours: ' hours and '
+      minutes: ' minutes'
+      workouts_error: ' Add Workouts To See Summary'
+      first: 'First Weight Entry On: '
+      recent: 'Most Recent Weight Entry On: '
+      first_error: Upload an Image to Your First Weight Entry to Compare
+      recent_error: Upload an Image to Your Most Recent Weight Entry to Compare
   shared: 
     header:
       title: Health Me
@@ -153,4 +156,6 @@ en:
       name: 'Name:'
       email: 'Email:'
       telephone: 'Telephone:'
+      thanks: Thanks,
+      message: Could you get in touch with me please?
   
