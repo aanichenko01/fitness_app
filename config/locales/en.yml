@@ -140,6 +140,7 @@ en:
       recent: 'Most Recent Weight Entry On: '
       first_error: Upload an Image to Your First Weight Entry to Compare
       recent_error: Upload an Image to Your Most Recent Weight Entry to Compare
+      progress_pictures: Your Progress Pictures
   shared: 
     header:
       title: Health Me

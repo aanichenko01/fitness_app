@@ -1,44 +1,47 @@
 %h2= t('.title')
 
--# Only displays graph is there are actually workouts
+-#Only displays graph is there are actually workouts
 -if @totalDuration > 0
     = pie_chart workouts_this_month.group(:workout_type).count
 
 %br
 
 %div.container-fluid.box_display
+    -#Only displays if there are weight entries
     -if current_user.weights.first.present?
-        -#displays total weight chnage
+        -#Displays total weight chnage
         %h4.box.fas.fa-weight= t('.weight_change')
         %p.box=  @weightDifference.to_s + t('.kg')
-    -else
+    -else  #Prompt user to add weight entries
         %h4.box.fas.fa-exclamation-circle= t('.weight_change_error')
+    -#Only displays if there are workout entries
     -if current_user.workouts.first.present?
         %br
-        -#displays total calories for this month
         %h4.box.fas.fa-fire-alt= t('.calories_burned')
+        -#Displays total calories for this month
         %p.box= @totalCalories.to_s + t('.calories')
-        -#displays total calories for this month
         %br
         %h4.box.fas.fa-dumbbell= t('.workouts')
+        -#Displays total time worked out for this month
         %p.box=  @totalHours.to_s + t('.hours') + @totalMins.to_s + t('.minutes')
-    -else
+    -else #Prompt user to add workout entries
         %br
         %h4.box.fas.fa-exclamation-circle= t('.workouts_error')
 
--#display progress images
+-#Display progress images
 .container-fluid.text-center
+    -#Only displays if there are weight entries
     -if current_user.weights.first.present?
-        %h2 Your Progress Pictures
+        %h2= t('.progress_pictures')
         %h5= t('.first') + first_weight.date.to_s
-        - if first_weight.image.attached?
+        - if first_weight.image.attached? #Display attached image
             %image.img-fluid{src: "#{(url_for(first_weight.image))}"}
-        - else
+        - else #Prompt user to add image to specific weight
             %h5.fas.fa-exclamation-circle= t('.first_error')
         %h5= t('.recent') + current_weight.date.to_s
-        - if current_weight.image.attached?
+        - if current_weight.image.attached? #Display attached image
             %image.img-fluid{src: "#{(url_for(current_weight.image))}"}
-        - else
+        - else #Prompt user to add image to specific weight
             %h5.fas.fa-exclamation-circle= t('.recent_error')
 
 
