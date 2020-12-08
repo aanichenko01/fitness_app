@@ -8,7 +8,6 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
 
     assert_select 'title', 'Health Me'
-    assert_select 'p', 'Welcome to "Health Me!"'
   end
 
   test "should get contact" do
