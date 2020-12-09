@@ -49,7 +49,7 @@ en:
       enter_telephone: Enter your telephone number
       message: "Message:"
       enter_message: What do you want to say?
-      submit: Submit
+      send: Send
     request_contact: 
       no_email: You must provide an email address.
       email_sent: Email sent, we will be in touch shortly.
