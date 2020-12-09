@@ -1,15 +1,12 @@
 %p= "Dear #{t('app_title')},"
-%p= t('.message')
-
-%dl
-    %dt= t('.name')
-    %dd= @name
-    %dt= t('.email')
-    %dd= @email
-    %dt= t('.telephone')
-    %dd= @telephone
 
 %p= @message
 
 %p= t('.thanks')
 %p= @name
+
+%b= t('.email')
+%i= @email
+%br
+%b= t('.telephone')
+%i= @telephone
