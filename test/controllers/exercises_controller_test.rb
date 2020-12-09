@@ -24,11 +24,6 @@ class ExercisesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to exercise_url(Exercise.last)
   end
 
-  test "should show exercise" do
-    get exercise_url(@exercise)
-    assert_response :success
-  end
-
   test "should get edit" do
     get edit_exercise_url(@exercise)
     assert_response :success
