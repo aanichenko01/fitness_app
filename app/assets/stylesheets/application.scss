@@ -19,6 +19,8 @@
 
 /* Default font for entire website */
 $font: Georgia, Times, "Times New Roman", serif;
+$blue: #3a69c0;
+$font_color: #292929;
 
 body {
   font-family: $font;
@@ -31,37 +33,36 @@ h1 {
 
 /* Styles all table headers the same on the website */
 th{
-text-transform: uppercase;
-color: white;
-background-color:  #292929;
+  text-transform: uppercase;
+  color: white;
+  background-color: $font_color;
 }
 
 /* Styles all links the same on the website */
 a:link,
 a:visited{
-color: #3a69c0;
-background-color: transparent;
-text-decoration: none;
+  color: $blue;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 /* Styles all hovering over links the same on the website */
 a:hover {
-color: #292929;
-background-color: transparent;
-text-decoration: none;
+  color: $font_color;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 /* All divs styled the same way */
 .box{
-color: white;
+  color: white;
 }
 
 .box_display{
-border-radius: 25px;
-background:#3a69c0;
-padding: 20px;
+  border-radius: 25px;
+  background:$blue;
+  padding: 20px;
 }
-
 
 /* Remove the navbar's default margin-bottom and rounded borders */ 
 .navbar {
