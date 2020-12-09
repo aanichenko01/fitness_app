@@ -1,100 +1,75 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
- 
- $font: Georgia, Times, "Times New Roman", serif;
- $color2: #ffffff;
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
- 
- body {
-     font-family: $font;
-     background-color: $color2;
- }
- 
- h1 {
-     text-transform: uppercase;
- }
+/* Default font for entire website */
+$font: Georgia, Times, "Times New Roman", serif;
 
+body {
+  font-family: $font;
+  background-color: white;
+}
 
-  .heading a:link,
-  .heading a:visited{
-    color: white;
-  }
+h1 {
+  text-transform: uppercase;
+}
 
-  th{
-    text-transform: uppercase;
-    color: white;
-    background-color:  #292929;
-  }
+/* Styles all table headers the same on the website */
+th{
+text-transform: uppercase;
+color: white;
+background-color:  #292929;
+}
 
-  a:link,
-  a:visited{
-    color: #3a69c0;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #292929;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
+/* Styles all links the same on the website */
+a:link,
+a:visited{
+color: #3a69c0;
+background-color: transparent;
+text-decoration: none;
+}
+
+/* Styles all hovering over links the same on the website */
+a:hover {
+color: #292929;
+background-color: transparent;
+text-decoration: none;
+}
+
+/* All divs styled the same way */
 .box{
-    color: white;
+color: white;
 }
 
 .box_display{
-    border-radius: 25px;
-    background:#3a69c0;
-    padding: 20px;
+border-radius: 25px;
+background:#3a69c0;
+padding: 20px;
 }
 
- 
- /* Remove the navbar's default margin-bottom and rounded borders */ 
- .navbar {
-     margin-bottom: 0;
-     border-radius: 0;
-   }
-   
-   /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-   .row.content {height: 450px}
-   
-   .sidenav {
-     padding-top: 20px;
-   }
-   
-   /* Set black background color, white text and some padding */
-   footer {
-     background-color: rgb(255, 255, 255);
-     color: white;
-     padding: 15px;
-   }
-   
-   /* On small screens, set height to 'auto' for sidenav and grid */
-   @media screen and (max-width: 767px) {
-     .sidenav {
-       height: auto;
-       padding: 15px;
-     }
-     .row.content {height:auto;} 
-   }
- 
- 
- 
- 
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Add some padding to footer */
+footer {
+  padding: 30px;
+}
