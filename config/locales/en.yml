@@ -122,6 +122,7 @@ en:
       title: New Weight
       back: Back
     show:
+      kg: ' kg'
       edit: Edit
       delete: Delete
       delete_confirm: Are you sure?

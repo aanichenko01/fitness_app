@@ -6,6 +6,7 @@ class Workout < ApplicationRecord
     #Each workouts must have a date, workout type, duration and user
     validates :date, :workout_type, :duration, :user, presence: true
 
+    #Scope to show workouts only associated to specific user
     scope :user_workouts, ->(user) { where(['user_id = ?', user.id]) }
 
     #Returns all workouts for this month for a user

@@ -18,9 +18,9 @@
         = f.text_field :workout_type, class: 'form-control'
       .form-group
         = f.label :duration
-        = f.number_field :duration, class: 'form-control', min: '1'
+        = f.number_field :duration, class: 'form-control', min: '1' #Ensures user cannot enter negative time
       .form-group
         = f.label :calories
-        = f.number_field:calories, class: 'form-control', min: '1'
+        = f.number_field:calories, class: 'form-control', min: '1' #Ensures user cannot enter negative calories
       .form-group
         = f.submit t('.save'), class: 'btn btn-default'

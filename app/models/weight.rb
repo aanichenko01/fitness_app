@@ -6,6 +6,7 @@ class Weight < ApplicationRecord
     #Each weight entry must have a date, weight and user
     validates :date, :weight, :user, presence: true
 
+    #Scope to show weights only associated to specific user
     scope :user_weights, ->(user) { where(['user_id = ?', user.id]) }
 
     #Calculates weight difference for a user

@@ -19,9 +19,9 @@
         = f.text_field :title, class: 'form-control'
       .form-group
         = f.label :sets
-        = f.number_field :sets, class: 'form-control', min: '1'
+        = f.number_field :sets, class: 'form-control', min: '1' #Ensures user cannot enter less than 1 sets
       .form-group
         = f.label :reps
-        = f.number_field :reps, class: 'form-control', min: '1'
+        = f.number_field :reps, class: 'form-control', min: '1' #Ensures user cannot enter less than 1 reps
       .form-group
         = f.submit t('.save'), class: 'btn btn-default'

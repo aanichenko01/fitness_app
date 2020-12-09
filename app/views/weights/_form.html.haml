@@ -15,7 +15,7 @@
         = f.date_field :date, class: 'form-control'
       .form-group
         = f.label :weight
-        = f.number_field :weight, class: 'form-control', min: '0.0', step: '0.1'
+        = f.number_field :weight, class: 'form-control', min: '0.0', step: '0.1' #Ensures user cannot enter negative weight
       .form-group
         = f.label 'Progress Picture'
         = f.file_field :image
