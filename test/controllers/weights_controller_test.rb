@@ -12,11 +12,16 @@ class WeightsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get weights_url
     assert_response :success
+
+    assert_select 'h2', 'Your Weight'
+    assert_select 'li', 'Weight Log'
   end
 
   test "should get new" do
     get new_weight_url
     assert_response :success
+
+    assert_select 'h1', 'New Weight'
   end
 
   test "should create weight" do
@@ -35,6 +40,8 @@ class WeightsControllerTest < ActionDispatch::IntegrationTest
   test "should get edit" do
     get edit_weight_url(@weight)
     assert_response :success
+
+    assert_select 'h1', 'Editing Weight'
   end
 
   test "should update weight" do

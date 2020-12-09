@@ -13,11 +13,16 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get workouts_url
     assert_response :success
+
+    assert_select 'h2', 'Your Workouts'
+    assert_select 'li', 'Workout Log'
   end
 
   test "should get new" do
     get new_workout_url
     assert_response :success
+
+    assert_select 'h1', 'New Workout'
   end
 
   test "should create workout" do
@@ -36,6 +41,8 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
   test "should get edit" do
     get edit_workout_url(@workout)
     assert_response :success
+
+    assert_select 'h1', 'Editing workout'
   end
 
   test "should update workout" do

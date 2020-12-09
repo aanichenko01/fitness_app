@@ -2,6 +2,7 @@ require 'test_helper'
 
 class SummaryControllerTest < ActionDispatch::IntegrationTest
   setup do
+    @weight = weights(:one)
     @user = users(:one)
     sign_in @user
   end
@@ -9,6 +10,8 @@ class SummaryControllerTest < ActionDispatch::IntegrationTest
   test "should get summary" do
     get summary_url
     assert_response :success
+
+    assert_select 'h2', 'Your Monthly Summary'
   end
 
 end
