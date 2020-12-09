@@ -116,6 +116,8 @@ en:
       weight: Weight(KG)
       details: Details
       new_weight: New Weight
+      weight_change: ' Total Weight Change'
+      kg: ' kg'
     new:
       title: New Weight
       back: Back

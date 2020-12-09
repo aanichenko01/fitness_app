@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # Resouce paths
-  resources :exercises
+  resources :exercises, except: [:index]
   resources :workouts
   resources :weights
   devise_for :users
