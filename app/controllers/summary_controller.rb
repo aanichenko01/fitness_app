@@ -1,4 +1,5 @@
 class SummaryController < ApplicationController
+  # Page can only be accessed if user is logged in
   before_action :authenticate_user!
   
   def summary

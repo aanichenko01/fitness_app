@@ -1,10 +1,10 @@
 class Workout < ApplicationRecord
+    #Each workout entry is associated to a user
     belongs_to :user
+    #Each workout has many exercises
     has_many :exercises, dependent: :destroy
-
-    validates :date, presence: true
-    validates :workout_type, presence: true
-    validates :duration, presence: true
+    #Each workouts must have a date, workout type, duration and user
+    validates :date, :workout_type, :duration, :user, presence: true
 
     scope :user_workouts, ->(user) { where(['user_id = ?', user.id]) }
 

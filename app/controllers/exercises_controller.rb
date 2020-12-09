@@ -1,6 +1,7 @@
 class ExercisesController < ApplicationController
   before_action :set_exercise, only: [:edit, :update, :destroy]
   before_action :set_workout, only: [:new, :create]
+  # Page can only be accessed if user is logged in
   before_action :authenticate_user!
 
   # GET /exercises/new

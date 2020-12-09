@@ -1,5 +1,6 @@
 class WeightsController < ApplicationController
   before_action :set_weight, only: [:show, :edit, :update, :destroy]
+  # Page can only be accessed if user is logged in
   before_action :authenticate_user!
 
   # GET /weights

@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  # Each user has many workouts and weights
   has_many :workouts
   has_many :weights
 end
