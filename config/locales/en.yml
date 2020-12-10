@@ -68,6 +68,8 @@ en:
       no_email: You must provide an email address.
       email_sent: Email sent, we will be in touch shortly.
   workouts:
+    form:
+      error: " prohibited this workout from being saved:"
     new: New Workout
     edit:
       title: Editing Workout
@@ -82,6 +84,8 @@ en:
       calories: 'Calories:'
       add: Add Exercise
   exercises: 
+    form:
+      error: " prohibited this exercise from being saved:"
     table:
       exercises: Exercises
       sets: Sets
@@ -97,6 +101,8 @@ en:
       reps: 'Reps:'
       back: Back
   weights:
+    form:
+      error: " prohibited this weight from being saved:"
     new: New Weight
     edit:
       title: Editing Weight
