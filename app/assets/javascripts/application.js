@@ -10,12 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery3
+//= require jquery_ujs
 //= require bootstrap-sprockets
 //= require chartkick
 //= require Chart.bundle
 //= require jquery.validate
-//= require jquery3
-//= require jquery_ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
@@ -48,9 +48,7 @@ function Resize(){
   });
 }
 
-
-$(document).ready(function() {
+$(document).on('turbolinks:load', function(){
       ValidateContactForm();
       Resize();
 });
-  
