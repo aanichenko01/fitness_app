@@ -3,7 +3,7 @@ require 'test_helper'
 class WeightTest < ActiveSupport::TestCase
   
   #Creates a user to associate weight to
-  #Creates two weight variables to test weight model methods
+  #Creates two weight entries to test weight model methods
   setup do
     @user = users(:one)
 

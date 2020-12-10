@@ -13,7 +13,7 @@
     .col-xs-3
       .form-group
         = f.label :date
-        = f.date_field :date, class: 'form-control'
+        = f.date_field :date, class: 'form-control', value: Date.today
       .form-group
         = f.label :workout_type
         = f.text_field :workout_type, class: 'form-control'
