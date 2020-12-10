@@ -83,6 +83,9 @@ en:
       duration: 'Duration: '
       calories: 'Calories:'
       add: Add Exercise
+    created: 'Workout was successfully created.'
+    updated: 'Workout was successfully updated.'
+    deleted: 'Workout was successfully deleted.'
   exercises: 
     form:
       error: " prohibited this exercise from being saved:"
@@ -100,6 +103,9 @@ en:
       sets: 'Sets:'
       reps: 'Reps:'
       back: Back
+    created: 'Exercise was successfully created.'
+    updated: 'Exercise was successfully updated.'
+    deleted: 'Exercise was successfully deleted.'
   weights:
     form:
       error: " prohibited this weight from being saved:"
@@ -110,6 +116,9 @@ en:
       title: Your Weight
       weight: Weight(KG)
       weight_change: ' Total Weight Change'
+    created: 'Weight was successfully created.'
+    updated: 'Weight was successfully updated.'
+    deleted: 'Weight was successfully deleted.'
   summary:
     summary:
       title: Your Monthly Summary
