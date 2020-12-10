@@ -4,6 +4,7 @@
   - if @exercise.errors.any?
     #error_explanation
       %h2= "#{pluralize(@exercise.errors.count, "error")}" + t('.error')
+      %ul
         - @exercise.errors.full_messages.each do |message|
           %li= message
 

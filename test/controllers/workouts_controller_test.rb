@@ -42,7 +42,7 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
     get edit_workout_url(@workout)
     assert_response :success
 
-    assert_select 'h1', 'Editing workout'
+    assert_select 'h1', 'Editing Workout'
   end
 
   test "should update workout" do
