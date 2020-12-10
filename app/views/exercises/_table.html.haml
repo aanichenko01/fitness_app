@@ -13,5 +13,5 @@
         %td= exercise.title
         %td= exercise.sets
         %td= exercise.reps
-        %td= link_to t('.edit'), edit_exercise_path(exercise)
-        %td= link_to t('.delete'), exercise, :method => :delete, :data => { :confirm => t('.delete_confirm') }, :remote => true
+        %td= link_to t('crud.edit'), edit_exercise_path(exercise)
+        %td= link_to t('crud.delete'), exercise, :method => :delete, :data => { :confirm => t('crud.delete_confirm') }, :remote => true

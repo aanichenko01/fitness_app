@@ -8,8 +8,8 @@
   = @weight.date
 %p
   %b Weight:
-  = @weight.weight.to_s + t('.kg')
+  = @weight.weight.to_s + t('units.kg')
 
-= link_to t('.edit'), edit_weight_path(@weight)
+= link_to t('crud.edit'), edit_weight_path(@weight)
 \|
-= link_to t('.delete'), @weight, method: :delete, data: { confirm: t('.delete_confirm') }
+= link_to t('crud.delete'), @weight, method: :delete, data: { confirm: t('crud.delete_confirm') }

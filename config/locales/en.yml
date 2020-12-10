@@ -32,6 +32,20 @@
 en:
   app_title: Health Me
   app_description: A fitness website
+  units:
+    kg: ' kg'
+    calories: ' calories'
+    minutes: ' minutes'
+    hours: ' hours'
+    date: Date
+  crud:
+    details: Details
+    edit: Edit
+    delete: Delete
+    delete_confirm: Are you sure?
+    save: Save
+  connectors:
+    and: ' and '
   home:
     home:
       welcome: Welcome to Health Me
@@ -54,50 +68,28 @@ en:
       no_email: You must provide an email address.
       email_sent: Email sent, we will be in touch shortly.
   workouts:
-    form:
-      save: Save
+    new: New Workout
     edit:
-      title: Editing workout
-      back: Back
+      title: Editing Workout
     index:
       title: Your Workouts
-      date: Date
       workout_type: Workout Type
       duration: Duration(Mins)
-      calories: Calories
-      details: Details
-      edit: Edit
-      delete: Delete
-      delete_confirm: Are you sure?
-      new: New Workout
-    new:
-      title: New Workout
-      back: Back
     show:
       date: 'Date:'
       workout_type: 'Workout Type:'
       duration: 'Duration: '
       calories: 'Calories:'
-      edit: Edit
-      delete: Delete
-      delete_confirm: Are you sure?
       add: Add Exercise
-      back: Back
   exercises: 
-    form:
-      save: Save
     table:
       exercises: Exercises
       sets: Sets
       reps: Reps
-      edit: Edit
-      delete: Delete
-      delete_confirm: Are you sure?
     edit:
-      title: Editing exercise
+      title: Editing Exercise
     new:
       title: New Exercise
-      back: Back
     show:
       workout: 'Workout:'
       title: 'Title:'
@@ -105,39 +97,20 @@ en:
       reps: 'Reps:'
       back: Back
   weights:
-    form:
-      save: Save
+    new: New Weight
     edit:
       title: Editing Weight
-      back: Back
     index:
       title: Your Weight
-      date: Date
       weight: Weight(KG)
-      details: Details
-      new_weight: New Weight
       weight_change: ' Total Weight Change'
-      kg: ' kg'
-    new:
-      title: New Weight
-      back: Back
-    show:
-      kg: ' kg'
-      edit: Edit
-      delete: Delete
-      delete_confirm: Are you sure?
-      back: Back
   summary:
     summary:
       title: Your Monthly Summary
       weight_change: ' Weight Change This Month'
       weight_change_error: ' Add Weight Records To See Weight Change'
       calories_burned: ' Calories Burned This Month'
-      calories: ' calories'
-      kg: ' kg'
       workouts: ' Duration Of Workouts This Month'
-      hours: ' hours and '
-      minutes: ' minutes'
       workouts_error: ' Add Workouts To See Summary'
       first: 'First Weight Entry On: '
       recent: 'Most Recent Weight Entry On: '
@@ -146,7 +119,6 @@ en:
       progress_pictures: Your Progress Pictures
   shared: 
     header:
-      title: Health Me
       nav_workouts: Workout Log
       nav_weights: Weight Log
       nav_summary: Summary
@@ -162,4 +134,3 @@ en:
       telephone: 'Telephone:'
       thanks: Thanks,
       message: Could you get in touch with me please?
-  

@@ -1,7 +1,7 @@
 %h2= t('.title')
 
 %i.far.fa-plus-square
-= link_to t('.new'), new_workout_path
+= link_to t('workouts.new'), new_workout_path
 %br
 %br
 
@@ -9,10 +9,10 @@
   %table.table.table-bordered.table-hover
     %thread
       %tr
-        %th.heading= link_to t('.date'), :sort => "date"
+        %th.heading= link_to t('units.date'), :sort => "date"
         %th.heading= link_to t('.workout_type'), :sort => "workout_type"
         %th.heading= link_to t('.duration'), :sort => "duration"
-        %th.heading= link_to t('.calories'), :sort => "calories"
+        %th.heading= link_to t('units.calories'), :sort => "calories"
         %th
 
 
@@ -23,4 +23,4 @@
             %td= workout.workout_type
             %td= workout.duration
             %td= workout.calories
-            %td= link_to t('.details'), workout
+            %td= link_to t('crud.details'), workout

@@ -6,14 +6,14 @@
   = @workout.workout_type
 %p
   %b= t('.duration')
-  = @workout.duration.to_s + ' minutes'
+  = @workout.duration.to_s + t('units.minutes')
 %p
   %b= t('.calories')
   = @workout.calories
 
-= link_to t('.edit'), edit_workout_path(@workout)
+= link_to t('crud.edit'), edit_workout_path(@workout)
 \|
-= link_to t('.delete'), @workout, method: :delete, data: { confirm: t('.delete_confirm') }
+= link_to t('crud.delete'), @workout, method: :delete, data: { confirm: t('crud.delete_confirm') }
 
 %hr
 

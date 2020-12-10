@@ -8,11 +8,11 @@
   %div.container-fluid.box_display
     -#Displays total weight change
     %h4.box.fas.fa-weight= t('.weight_change')
-    %p.box=  weight_difference.to_s + t('.kg')
+    %p.box=  weight_difference.to_s + t('units.kg')
   %hr
 
 %i.far.fa-plus-square
-= link_to t('.new_weight'), new_weight_path
+= link_to t('weights.new'), new_weight_path
 %br
 
 -#Only displays content if there is atleast one weight entry
@@ -21,7 +21,7 @@
   %table.table.table-bordered.table-hover
     %thead
       %tr
-        %th= t('.date')
+        %th= t('units.date')
         %th= t('.weight')
         %th
 
@@ -30,4 +30,4 @@
         %tr
           %td= weight.date
           %td= weight.weight
-          %td= link_to t('.details'), weight
+          %td= link_to t('crud.details'), weight
