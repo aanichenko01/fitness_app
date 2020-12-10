@@ -6,6 +6,7 @@ class SummaryControllerTest < ActionDispatch::IntegrationTest
     sign_in @user
   end
 
+  #Tests getting summary page
   test "should get summary" do
     get summary_url
     assert_response :success

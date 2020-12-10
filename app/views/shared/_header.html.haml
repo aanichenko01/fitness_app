@@ -11,6 +11,7 @@
                 %a.navbar-brand{'href' => '/home'}= t('app_title')
             #myNavbar.collapse.navbar-collapse
                 %ul.nav.navbar-nav.navbar
+                    -#Displays links to all the different pages
                     %li=link_to t('.nav_workouts'), workouts_path
                     %li=link_to t('.nav_weights'), weights_path
                     %li=link_to t('.nav_summary'), summary_path

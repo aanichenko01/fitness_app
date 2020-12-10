@@ -8,6 +8,7 @@
         - @weight.errors.full_messages.each do |message|
           %li= message
 
+  -#Form to enter new weight
   %form{'action' => '/action_page.php'}
     .col-xs-3
       .form-group
@@ -17,7 +18,7 @@
         = f.label :weight
         = f.number_field :weight, class: 'form-control', min: '0.0', step: '0.1' #Ensures user cannot enter negative weight
       .form-group
-        = f.label 'Progress Picture'
+        = f.label t('.progress_picture')
         = f.file_field :image
       .form-group
         = f.submit t('crud.save'), class: 'btn btn-default'

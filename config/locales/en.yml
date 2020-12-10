@@ -108,6 +108,7 @@ en:
     deleted: 'Exercise was successfully deleted.'
   weights:
     form:
+      progress_picture: Progress Picture
       error: " prohibited this weight from being saved:"
     new: New Weight
     edit:

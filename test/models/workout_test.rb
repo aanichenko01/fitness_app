@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class WorkoutTest < ActiveSupport::TestCase
+  
+  #Creates a user to associate workout to
   setup do
     @user = users(:one)
   end

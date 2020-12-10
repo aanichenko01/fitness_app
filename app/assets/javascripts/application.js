@@ -20,6 +20,7 @@
 //= require turbolinks
 //= require_tree .
 
+//Validates contact form
 function ValidateContactForm(){
     $("#contact_form").validate({
         //Validation rules
@@ -40,6 +41,7 @@ function ValidateContactForm(){
       });
 }
 
+//Resizes Text on Home Page on Hover
 function Resize(){
   $(".home").hover(function(){
     $(this).css("fontSize", "30px");
@@ -48,6 +50,7 @@ function Resize(){
   });
 }
 
+//Overcomes issues with turbolinks not parsing js files
 $(document).on('turbolinks:load', function(){
       ValidateContactForm();
       Resize();

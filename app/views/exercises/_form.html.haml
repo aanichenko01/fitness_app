@@ -8,10 +8,12 @@
         - @exercise.errors.full_messages.each do |message|
           %li= message
 
+  -#Form to enter new exercise
   %form{'action' => '/action_page.php'}
     .col-xs-3
       .form-group
         = f.label :workout
+        -#Renders the workout type that this exercise is associated with
         %p= @exercise.workout.workout_type
         = f.hidden_field :workout_id, value: @exercise.workout.id, class: 'form-control'
       .form-group

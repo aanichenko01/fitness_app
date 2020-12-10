@@ -2,6 +2,7 @@ require 'test_helper'
 
 class ExerciseTest < ActiveSupport::TestCase
 
+  #Creates a workout to associate exercises to
   setup do
     @workout = workouts(:one)
   end

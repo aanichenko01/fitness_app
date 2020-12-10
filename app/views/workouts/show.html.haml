@@ -20,6 +20,7 @@
 -#Renders exercises table only if there are exercises to display
 = render :partial => "exercises/table" unless @workout.exercises.empty?
 
+-#Link to add new exercise
 %i.far.fa-plus-square
 = link_to t('.add'), new_exercise_path(workout_id: @workout)
 

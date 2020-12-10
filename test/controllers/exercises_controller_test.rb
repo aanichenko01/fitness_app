@@ -3,6 +3,8 @@ require 'test_helper'
 class ExercisesControllerTest < ActionDispatch::IntegrationTest
   Devise::Test::IntegrationHelpers
 
+  #Creates an exercise and workout
+  #Signs in user so tests can run
   setup do
     get '/users/sign_in'
     @exercise = exercises(:one)
@@ -39,6 +41,7 @@ class ExercisesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to exercise_url(@exercise)
   end
 
+  #Tests that AJAX is destroying exercise correctly
   test "should destroy exercise using ajax" do
     assert_difference('Exercise.count', -1) do
       delete exercise_url(@exercise), xhr: true

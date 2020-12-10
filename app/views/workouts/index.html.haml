@@ -1,10 +1,12 @@
 %h2= t('.title')
 
+-#Link to add a new workout
 %i.far.fa-plus-square
 = link_to t('workouts.new'), new_workout_path
 %br
 %br
 
+-#Displays workouts table only if current user has workouts to display
 -if current_user.workouts.first.present?
   %table.table.table-bordered.table-hover
     %thread
@@ -15,8 +17,8 @@
         %th.heading= link_to t('units.calories'), :sort => "calories"
         %th
 
-
       %tbody
+        -#Displays workouts so that most recent entry is at the top
         - @workouts.reverse_each do |workout|
           %tr
             %td= workout.date

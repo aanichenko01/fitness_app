@@ -11,11 +11,12 @@
     %p.box=  weight_difference.to_s + t('units.kg')
   %hr
 
+-#Link to add a new weight
 %i.far.fa-plus-square
 = link_to t('weights.new'), new_weight_path
 %br
 
--#Only displays content if there is atleast one weight entry
+-#Only displays content if there is atleast one weight entry for current user
 -if current_user.weights.first.present?
   %br
   %table.table.table-bordered.table-hover
@@ -26,6 +27,7 @@
         %th
 
     %tbody
+      -#Displays weights so most recent entry is at the top
       - @weights.reverse_each do |weight|
         %tr
           %td= weight.date

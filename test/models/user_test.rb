@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
+  
   test 'should not save invalid user' do
     user = User.new
     user.save
@@ -9,7 +10,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'should save valid user' do
     user = User.new
-    user.email = 'bob@example.com'
+    user.email = 'ana@example.com'
     user.password = '12345678'
     user.save
     assert user.valid?

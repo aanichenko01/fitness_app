@@ -1,27 +1,34 @@
 
 .container-fluid.text-center
+    -#Displays logo of website
     %img{:alt => "", :src => "/assets/logo.png", id: 'logo'}
     %h1= t('.welcome')
     %hr
 
+    -#Displays some images of workout and exercises table for homepage
     %img{:alt => "", :src => "/assets/workout_log.png"}
     %img{:alt => "", :src => "/assets/workout_details.png"}
 
+    -#Displays text explaining images
     .home.h4.fas.fa-running= t('.record_workouts')
 
     %hr
 
+    -#Displays some images of weight table and weight graph for homepage
     %img{:alt => "", :src => "/assets/weight_log.png"}
     %img{:alt => "", :src => "/assets/weight_graph.png"}
 
+    -#Displays text explaining images
     .home.h4.fas.fa-weight= t('.track_weight')
 
     %hr
 
+    -#Displays image of summary for homepage
     %img{:alt => "", :src => "/assets/summary.png"}
 
     %br
 
+    -#Displays text explaining images
     .home.h4.fas.fa-fire-alt= t('.stay_motivated')
 
     %hr

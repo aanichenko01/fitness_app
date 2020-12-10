@@ -3,6 +3,8 @@ require 'test_helper'
 class WorkoutsControllerTest < ActionDispatch::IntegrationTest
   Devise::Test::IntegrationHelpers
 
+  #Creates a workout
+  #Signs in user so tests can run
   setup do
     get '/users/sign_in'
     @workout = workouts(:one)
