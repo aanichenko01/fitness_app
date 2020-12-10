@@ -40,8 +40,17 @@ function ValidateContactForm(){
       });
 }
 
+function Resize(){
+  $(".home").hover(function(){
+    $(this).css("fontSize", "30px");
+    }, function(){
+    $(this).css("fontSize", "18px");
+  });
+}
+
 
 $(document).ready(function() {
       ValidateContactForm();
+      Resize();
 });
   

@@ -16,8 +16,8 @@ h1{
     left: 1px;
 }
 
-/* Styles text on home page */
-#home{
-    font-style: italic;
-    text-transform: uppercase;
+/* Styles text on home page, important ensure this style is prioritized*/
+.home{
+    font-style: italic !important;
+    text-transform: uppercase !important;
 }
