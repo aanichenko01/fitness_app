@@ -7,6 +7,7 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
     get root_url
     assert_response :success
+    assert_template layout: 'application'
 
     assert_select 'title', 'Health Me'
   end
@@ -37,6 +38,7 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :redirect
     assert_nil flash[:alert]
     assert_not_empty flash[:notice]
+    assert_template layout: 'mailer'
   end
 
 end

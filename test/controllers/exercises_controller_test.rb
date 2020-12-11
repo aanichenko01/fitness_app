@@ -29,6 +29,7 @@ class ExercisesControllerTest < ActionDispatch::IntegrationTest
   test "should show exercise" do
     get exercise_url(@exercise)
     assert_response :success
+    assert_template layout: 'application'
   end
 
   test "should get edit" do

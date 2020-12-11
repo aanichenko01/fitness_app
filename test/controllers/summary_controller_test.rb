@@ -10,6 +10,7 @@ class SummaryControllerTest < ActionDispatch::IntegrationTest
   test "should get summary" do
     get summary_url
     assert_response :success
+    assert_template layout: 'application'
 
     assert_select 'h2', 'Your Monthly Summary'
   end

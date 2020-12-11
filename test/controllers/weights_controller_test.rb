@@ -15,6 +15,7 @@ class WeightsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get weights_url
     assert_response :success
+    assert_template layout: 'application'
 
     assert_select 'h2', 'Your Weight'
     assert_select 'li', 'Weight Log'
@@ -38,6 +39,7 @@ class WeightsControllerTest < ActionDispatch::IntegrationTest
   test "should show weight" do
     get weight_url(@weight)
     assert_response :success
+    assert_template layout: 'application'
   end
 
   test "should get edit" do
