@@ -9,7 +9,7 @@
 
   %tbody
     - @workout.exercises.each do |exercise|
-      %tr{id: "exercise_#{exercise.id}"}
+      %tr{id: "exercise_#{exercise.id}", class: 'hoverable'}
         %td= exercise.title
         %td= exercise.sets
         %td= exercise.reps

@@ -50,8 +50,17 @@ function Resize(){
   });
 }
 
+function ResizeTable(){
+  $(".hoverable").hover(function(){
+    $(this).css("fontSize", "18px");
+    }, function(){
+    $(this).css("fontSize", "14px");
+  });
+}
+
 //Overcomes issues with turbolinks not parsing js files
 $(document).on('turbolinks:load', function(){
       ValidateContactForm();
       Resize();
+      ResizeTable();
 });

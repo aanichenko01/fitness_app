@@ -20,7 +20,7 @@
       %tbody
         -#Displays workouts so that most recent entry is at the top
         - @workouts.reverse_each do |workout|
-          %tr
+          %tr.hoverable
             %td= workout.date
             %td= workout.workout_type
             %td= workout.duration

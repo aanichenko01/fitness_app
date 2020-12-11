@@ -29,7 +29,7 @@
     %tbody
       -#Displays weights so most recent entry is at the top
       - @weights.reverse_each do |weight|
-        %tr
+        %tr.hoverable
           %td= weight.date
           %td= weight.weight
           %td= link_to t('crud.details'), weight
