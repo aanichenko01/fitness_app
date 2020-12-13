@@ -38,6 +38,36 @@ class WeightTest < ActiveSupport::TestCase
     assert weight.valid?
   end
 
+  test 'should not save weight without date' do
+    weight = Weight.new
+
+    weight.weight = 80.2
+    weight.user = @user
+
+    weight.save
+    refute weight.valid?
+  end
+
+  test 'should not save weight without weight' do
+    weight = Weight.new
+
+    weight.date = 2001-01-01
+    weight.user = @user
+
+    weight.save
+    refute weight.valid?
+  end
+
+  test 'should not save weight without user' do
+    weight = Weight.new
+
+    weight.date = 2001-01-01
+    weight.weight = 80.2
+
+    weight.save
+    refute weight.valid?
+  end
+
   test 'should get earliest date entry' do
     assert_equal(@weightOne, Weight.first_weight(@user))
   end 

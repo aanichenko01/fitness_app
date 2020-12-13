@@ -15,4 +15,18 @@ class UserTest < ActiveSupport::TestCase
     user.save
     assert user.valid?
   end
+
+  test 'should not save user without email' do
+    user = User.new
+    user.password = '12345678'
+    user.save
+    refute user.valid?
+  end
+
+  test 'should not save user without password' do
+    user = User.new
+    user.email = 'ana@example.com'
+    user.save
+    refute user.valid?
+  end
 end

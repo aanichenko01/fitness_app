@@ -1,7 +1,7 @@
 class Weight < ApplicationRecord
     #Each weight entry is associated to a user
     belongs_to :user
-    #Each weight has one image attached
+    #Each weight can have one image attached
     has_one_attached :image
     #Each weight entry must have a date and weight
     validates :date, :weight, presence: true
