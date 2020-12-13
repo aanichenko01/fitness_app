@@ -14,17 +14,6 @@ class ExerciseTest < ActiveSupport::TestCase
     refute exercise.valid?
   end
 
-  test 'should not save exercise without title' do
-    exercise = Exercise.new
-
-    exercise.workout = @workout
-    exercise.sets = 3
-    exercise.reps = 10
-
-    exercise.save
-    refute exercise.valid?
-  end
-
   test 'should save valid exercise' do
     exercise = Exercise.new
 
@@ -35,6 +24,17 @@ class ExerciseTest < ActiveSupport::TestCase
 
     exercise.save
     assert exercise.valid?
+  end
+
+  test 'should not save exercise without title' do
+    exercise = Exercise.new
+
+    exercise.workout = @workout
+    exercise.sets = 3
+    exercise.reps = 10
+
+    exercise.save
+    refute exercise.valid?
   end
 
   test 'should not save exercise without workout' do
@@ -61,4 +61,5 @@ class ExerciseTest < ActiveSupport::TestCase
     
     refute Exercise.exists?(exercise.id)
   end
+  
 end
