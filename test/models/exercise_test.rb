@@ -25,4 +25,29 @@ class ExerciseTest < ActiveSupport::TestCase
     exercise.save
     assert exercise.valid?
   end
+
+  test 'should not save exercise without workout' do
+    exercise = Exercise.new
+
+    exercise.title = 'My Exercise'
+    exercise.sets = 3
+    exercise.reps = 10
+
+    exercise.save
+    refute exercise.valid?
+  end
+
+  test 'should destroy exercise with workout' do 
+    exercise = Exercise.new
+
+    exercise.title = 'My Exercise'
+    exercise.workout = @workout
+    exercise.sets = 3
+    exercise.reps = 10
+
+    exercise.save
+    @workout.destroy
+    
+    refute Exercise.exists?(exercise.id)
+  end
 end
