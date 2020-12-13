@@ -16,6 +16,11 @@ class ExercisesControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
     get new_exercise_url(workout_id: @exercise.workout_id)
     assert_response :success
+
+    assert_select 'h1', 'New Exercise'
+    assert_template layout: 'application'
+    assert_template partial: '_header'
+    assert_template partial: '_footer'
   end
 
   test "should create exercise" do
@@ -29,12 +34,19 @@ class ExercisesControllerTest < ActionDispatch::IntegrationTest
   test "should show exercise" do
     get exercise_url(@exercise)
     assert_response :success
+    
     assert_template layout: 'application'
+    assert_template partial: '_header'
+    assert_template partial: '_footer'
   end
 
   test "should get edit" do
     get edit_exercise_url(@exercise)
     assert_response :success
+
+    assert_template layout: 'application'
+    assert_template partial: '_header'
+    assert_template partial: '_footer'
   end
 
   test "should update exercise" do
@@ -42,10 +54,10 @@ class ExercisesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to exercise_url(@exercise)
   end
 
-  #Tests that AJAX is destroying exercise correctly
   test "should destroy exercise using ajax" do
     assert_difference('Exercise.count', -1) do
       delete exercise_url(@exercise), xhr: true
     end
   end
+  
 end

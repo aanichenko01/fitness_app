@@ -9,6 +9,8 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_template layout: 'application'
 
     assert_select 'title', 'Health Me'
+    #Checks that all 6 images are displayed on home page
+    assert_select 'img', 6
   end
 
   test "should get contact" do

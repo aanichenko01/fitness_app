@@ -6,7 +6,7 @@ class WeightsControllerTest < ActionDispatch::IntegrationTest
   #Creates a weight 
   #Signs in user so tests can run
   setup do
-    get '/users/sign_in'
+    get "/users/sign_in"
     @weight = weights(:one)
     sign_in users(:one)
     post user_session_url
@@ -15,10 +15,12 @@ class WeightsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get weights_url
     assert_response :success
-    assert_template layout: 'application'
 
     assert_select 'h2', 'Your Weight'
     assert_select 'li', 'Weight Log'
+    assert_template layout: 'application'
+    assert_template partial: '_header'
+    assert_template partial: '_footer'
   end
 
   test "should get new" do
@@ -26,6 +28,9 @@ class WeightsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
 
     assert_select 'h1', 'New Weight'
+    assert_template layout: 'application'
+    assert_template partial: '_header'
+    assert_template partial: '_footer'
   end
 
   test "should create weight" do
@@ -39,7 +44,10 @@ class WeightsControllerTest < ActionDispatch::IntegrationTest
   test "should show weight" do
     get weight_url(@weight)
     assert_response :success
+    
     assert_template layout: 'application'
+    assert_template partial: '_header'
+    assert_template partial: '_footer'
   end
 
   test "should get edit" do
@@ -47,6 +55,9 @@ class WeightsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
 
     assert_select 'h1', 'Editing Weight'
+    assert_template layout: 'application'
+    assert_template partial: '_header'
+    assert_template partial: '_footer'
   end
 
   test "should update weight" do
@@ -61,4 +72,12 @@ class WeightsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to weights_url
   end
+
+  test "should redirect to login if not logged in" do
+    delete destroy_user_session_url
+
+    get weights_url
+    assert_redirected_to new_user_session_url
+  end
+
 end

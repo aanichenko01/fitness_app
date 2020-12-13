@@ -15,10 +15,12 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get workouts_url
     assert_response :success
-    assert_template layout: 'application'
 
     assert_select 'h2', 'Your Workouts'
     assert_select 'li', 'Workout Log'
+    assert_template layout: 'application'
+    assert_template partial: '_header'
+    assert_template partial: '_footer'
   end
 
   test "should get new" do
@@ -26,6 +28,9 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
 
     assert_select 'h1', 'New Workout'
+    assert_template layout: 'application'
+    assert_template partial: '_header'
+    assert_template partial: '_footer'
   end
 
   test "should create workout" do
@@ -39,7 +44,10 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
   test "should show workout" do
     get workout_url(@workout)
     assert_response :success
+
     assert_template layout: 'application'
+    assert_template partial: '_header'
+    assert_template partial: '_footer'
   end
 
   test "should get edit" do
@@ -47,6 +55,9 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
 
     assert_select 'h1', 'Editing Workout'
+    assert_template layout: 'application'
+    assert_template partial: '_header'
+    assert_template partial: '_footer'
   end
 
   test "should update workout" do
@@ -60,5 +71,12 @@ class WorkoutsControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to workouts_url
+  end
+
+  test "should redirect to login if not logged in" do
+    delete destroy_user_session_url
+
+    get workouts_url
+    assert_redirected_to new_user_session_url
   end
 end
